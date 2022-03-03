@@ -8,6 +8,7 @@ import authJwt from "./helpers/jwt.js";
 import errorHandler from "./helpers/error-handler.js";
 import categoriesRoutes from "./routes/categories.js";
 import usersRoutes from "./routes/users.js";
+import productsRoutes from "./routes/products.js";
 
 const app = express();
 
@@ -27,6 +28,7 @@ const { MONGO_URI, API_URL } = config;
 
 app.use(`${API_URL}/users`, usersRoutes);
 app.use(`${API_URL}/categories`, categoriesRoutes);
+app.use(`${API_URL}/products`, productsRoutes);
 
 mongoose
   .connect(MONGO_URI, {
@@ -37,7 +39,7 @@ mongoose
   .then(() => console.log("Database Connection is ready..."))
   .catch((err) => console.log(err));
 
-mongoose.set('debug', true);
+mongoose.set("debug", true);
 
 //Server
 app.listen(5000, () => {
