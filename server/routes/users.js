@@ -126,4 +126,14 @@ router.put("/:id", (req, res) => {
     });
 });
 
+router.get(`/get/count`, (req, res) => {
+  return User.countDocuments()
+    .then((userCount) => {
+      if (!userCount) {
+        return res.status(500).json({ success: false });
+      }
+      return res.status(200).json({ userCount });
+    });
+});
+
 export default router;
