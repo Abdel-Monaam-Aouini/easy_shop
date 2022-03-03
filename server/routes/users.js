@@ -4,9 +4,9 @@ import bcrypt from "bcrypt";
 import config from "../config.js";
 import jwt from "jsonwebtoken";
 
-const router = express.Router();
+const usersRoutes = express.Router();
 
-router.post("/register", async (req, res) => {
+usersRoutes.post("/register", async (req, res) => {
   const {
     name,
     email,
@@ -39,7 +39,7 @@ router.post("/register", async (req, res) => {
     });
 });
 
-router.post("/login", async (req, res) => {
+usersRoutes.post("/login", async (req, res) => {
   const { email, password } = req.body;
   return User.findOne({ email })
     .then((user) => {
@@ -67,7 +67,7 @@ router.post("/login", async (req, res) => {
 });
 
 // get Users List
-router.get(`/`, (req, res) => {
+usersRoutes.get(`/`, (req, res) => {
   return User.find()
     .select("-passwordHash")
     .then((userList) => {
@@ -78,7 +78,7 @@ router.get(`/`, (req, res) => {
     });
 });
 
-router.get("/:id", (req, res) => {
+usersRoutes.get("/:id", (req, res) => {
   return User.findById(req.params.id)
     .select("-passwordHash")
     .then((user) => {
@@ -97,7 +97,7 @@ router.get("/:id", (req, res) => {
 });
 
 // Update the user
-router.put("/:id", (req, res) => {
+usersRoutes.put("/:id", (req, res) => {
   return User.findById(req.params.id)
     .then((userExist) => {
       let newPassword;
@@ -126,14 +126,13 @@ router.put("/:id", (req, res) => {
     });
 });
 
-router.get(`/get/count`, (req, res) => {
-  return User.countDocuments()
-    .then((userCount) => {
-      if (!userCount) {
-        return res.status(500).json({ success: false });
-      }
-      return res.status(200).json({ userCount });
-    });
+usersRoutes.get(`/get/count`, (req, res) => {
+  return User.countDocuments().then((userCount) => {
+    if (!userCount) {
+      return res.status(500).json({ success: false });
+    }
+    return res.status(200).json({ userCount });
+  });
 });
 
-export default router;
+export default usersRoutes;

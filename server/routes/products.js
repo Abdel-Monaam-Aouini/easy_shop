@@ -3,9 +3,9 @@ import Product from "../models/Product.js";
 import Category from "../models/Category.js";
 import uploadFile from "../helpers/uploadFile.js";
 
-const router = express.Router();
+const productsRoutes = express.Router();
 
-router.get(`/`, (req, res) => {
+productsRoutes.get(`/`, (req, res) => {
   let filter = {};
   if (req.query.categories) {
     filter = { category: req.query.categories.split(",") };
@@ -21,7 +21,7 @@ router.get(`/`, (req, res) => {
     });
 });
 
-router.get(`/:id`, (req, res) => {
+productsRoutes.get(`/:id`, (req, res) => {
   return Product.findById(req.params.id)
     .populate("category")
     .then((product) => {
@@ -33,7 +33,7 @@ router.get(`/:id`, (req, res) => {
 });
 
 // create a new product
-router.post(`/`, uploadFile().single("image"), (req, res) => {
+productsRoutes.post(`/`, uploadFile().single("image"), (req, res) => {
   const file = req.file;
   if (!file) {
     return res.status(400).send("No image in the request");
@@ -70,7 +70,7 @@ router.post(`/`, uploadFile().single("image"), (req, res) => {
 });
 
 // Update Product
-router.put("/:id", uploadFile().single("image"), (req, res) => {
+productsRoutes.put("/:id", uploadFile().single("image"), (req, res) => {
   return Category.findById(req.body.category)
     .then((category) => {
       if (!category) {
@@ -113,7 +113,7 @@ router.put("/:id", uploadFile().single("image"), (req, res) => {
 });
 
 // delete product
-router.delete("/:id", (req, res) => {
+productsRoutes.delete("/:id", (req, res) => {
   return Product.findByIdAndRemove(req.params.id)
     .then((product) => {
       if (!product) {
@@ -130,7 +130,7 @@ router.delete("/:id", (req, res) => {
     });
 });
 
-router.get(`/get/count`, (req, res) => {
+productsRoutes.get(`/get/count`, (req, res) => {
   return Product.countDocuments()
     .then((productCount) => {
       if (!productCount) {
@@ -146,7 +146,7 @@ router.get(`/get/count`, (req, res) => {
     });
 });
 
-router.put(
+productsRoutes.put(
   "/gallery_images/:id",
   uploadFile().array("images", 10),
   (req, res) => {
@@ -174,4 +174,4 @@ router.put(
   }
 );
 
-export default router;
+export default productsRoutes;

@@ -6,9 +6,9 @@ import morgan from "morgan";
 import config from "./config.js";
 import authJwt from "./helpers/jwt.js";
 import errorHandler from "./helpers/error-handler.js";
-import categoriesRoutes from "./routes/categories.js";
 import usersRoutes from "./routes/users.js";
 import productsRoutes from "./routes/products.js";
+import categoriesRoutes from "./routes/categories.js";
 
 const app = express();
 

@@ -1,10 +1,10 @@
 import express from "express";
 import Category from "../models/Category.js";
 
-const router = express.Router();
+const categoriesRoutes = express.Router();
 
 // get categories List
-router.get(`/`, (req, res) => {
+categoriesRoutes.get(`/`, (req, res) => {
   return Category.find()
     .then((categoryList) => res.status(200).json(categoryList))
     .catch(() => {
@@ -13,7 +13,7 @@ router.get(`/`, (req, res) => {
 });
 
 // find Category with ID
-router.get("/:id", (req, res) => {
+categoriesRoutes.get("/:id", (req, res) => {
   return Category.findById(req.params.id)
     .then((category) => {
       if (!category) {
@@ -31,7 +31,7 @@ router.get("/:id", (req, res) => {
 });
 
 // create a new category
-router.post("/", (req, res) => {
+categoriesRoutes.post("/", (req, res) => {
   const { name, icon, color } = req.body;
   return Category.create({ name, icon, color })
     .then((category) => res.status(200).json(category))
@@ -42,7 +42,7 @@ router.post("/", (req, res) => {
 });
 
 // Update category
-router.put("/:id", (req, res) => {
+categoriesRoutes.put("/:id", (req, res) => {
   const { name, icon, color } = req.body;
   return Category.findByIdAndUpdate(
     req.params.id,
@@ -58,7 +58,7 @@ router.put("/:id", (req, res) => {
 });
 
 //delete Category
-router.delete("/:id", (req, res) => {
+categoriesRoutes.delete("/:id", (req, res) => {
   console.log(req.params);
   return Category.findByIdAndRemove(req.params.id)
     .then(() => {
@@ -74,4 +74,4 @@ router.delete("/:id", (req, res) => {
     });
 });
 
-export default router;
+export default categoriesRoutes;
