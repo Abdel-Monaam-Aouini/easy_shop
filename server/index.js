@@ -6,6 +6,7 @@ import morgan from "morgan";
 import config from "./config.js";
 import authJwt from "./helpers/jwt.js";
 import errorHandler from "./helpers/error-handler.js";
+import categoriesRoutes from "./routes/categories.js";
 
 const app = express();
 
@@ -21,7 +22,9 @@ app.use(authJwt());
 app.use("/public/uploads", express.static(__dirname + "/public/uploads"));
 app.use(errorHandler);
 
-const { MONGO_URI } = config;
+const { MONGO_URI, API_URL } = config;
+
+app.use(`${API_URL}/categories`, categoriesRoutes);
 
 mongoose
   .connect(MONGO_URI, {
