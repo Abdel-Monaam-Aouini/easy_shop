@@ -1,0 +1,135 @@
+{
+  "client": "Thunder Client",
+  "collectionName": "Category",
+  "dateExported": "2022-03-03T13:58:22.726Z",
+  "version": "1.1",
+  "folders": [],
+  "requests": [
+    {
+      "containerId": "",
+      "sortNum": 10000,
+      "headers": [
+        { "name": "Accept", "value": "*/*" },
+        {
+          "name": "User-Agent",
+          "value": "Thunder Client (https://www.thunderclient.com)"
+        }
+      ],
+      "colId": "be713cf5-a6c9-47be-a1f4-046612a2bf0a",
+      "name": "Delete Category",
+      "url": "http://localhost:5000/api/v1/categories/6220ab543b5e3445a8aafe10",
+      "method": "DELETE",
+      "modified": "2022-03-03T12:46:43.277Z",
+      "created": "2022-03-03T12:41:02.898Z",
+      "_id": "6c7999f3-9362-4eef-9800-039e7eed66b0",
+      "params": [],
+      "auth": {
+        "type": "bearer",
+        "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjIwYTc1YzA4MTc1Mjg2NDA4NzcyZjUiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2NDYzMTExOTYsImV4cCI6MTY0NjM5NzU5Nn0.acUuZNmKrOtcdATQajxu82OngpcIAYhrCjXgyB-OOCw"
+      },
+      "tests": []
+    },
+    {
+      "containerId": "",
+      "sortNum": 20000,
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": "Thunder Client (https://www.thunderclient.com)"
+        },
+        { "name": "Accept", "value": "*/*" }
+      ],
+      "colId": "be713cf5-a6c9-47be-a1f4-046612a2bf0a",
+      "name": "create category",
+      "url": "http://localhost:5000/api/v1/categories",
+      "method": "POST",
+      "modified": "2022-03-03T12:47:11.313Z",
+      "created": "2022-03-03T11:14:30.557Z",
+      "_id": "71a8db2f-a886-4fda-bd7c-4022d2080aba",
+      "params": [],
+      "body": {
+        "type": "json",
+        "raw": "{\n    \"name\": \"test\",\n    \"icon\": \"png.png\",\n    \"color\": \"red\"\n}",
+        "form": []
+      },
+      "auth": {
+        "type": "bearer",
+        "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjIwYTc1YzA4MTc1Mjg2NDA4NzcyZjUiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2NDYzMDgxNjYsImV4cCI6MTY0NjM5NDU2Nn0.rdFXL15qo5dAsdb-qVrPE2QP_wYIuGFfEYw-84LVnVc"
+      },
+      "tests": []
+    },
+    {
+      "containerId": "",
+      "sortNum": 30000,
+      "headers": [
+        { "name": "Accept", "value": "*/*" },
+        {
+          "name": "User-Agent",
+          "value": "Thunder Client (https://www.thunderclient.com)"
+        }
+      ],
+      "colId": "be713cf5-a6c9-47be-a1f4-046612a2bf0a",
+      "name": "Update Category",
+      "url": "http://localhost:5000/api/v1/categories/6220ab543b5e3445a8aafe10",
+      "method": "PUT",
+      "modified": "2022-03-03T12:47:20.700Z",
+      "created": "2022-03-03T12:15:26.203Z",
+      "_id": "cebf547b-e71f-4ca3-8540-a743e8207161",
+      "params": [],
+      "body": {
+        "type": "json",
+        "raw": "{\n    \"name\": \"test2\",\n    \"icon\": \"png2.png\",\n    \"color\": \"red2\"\n}",
+        "form": []
+      },
+      "auth": {
+        "type": "bearer",
+        "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjIwYTc1YzA4MTc1Mjg2NDA4NzcyZjUiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2NDYzMTExOTYsImV4cCI6MTY0NjM5NzU5Nn0.acUuZNmKrOtcdATQajxu82OngpcIAYhrCjXgyB-OOCw"
+      },
+      "tests": []
+    },
+    {
+      "containerId": "",
+      "sortNum": 40000,
+      "headers": [
+        { "name": "Accept", "value": "*/*" },
+        {
+          "name": "User-Agent",
+          "value": "Thunder Client (https://www.thunderclient.com)"
+        }
+      ],
+      "colId": "be713cf5-a6c9-47be-a1f4-046612a2bf0a",
+      "name": "Get Category By ID",
+      "url": "http://localhost:5000/api/v1/categories/6220ab543b5e3445a8aafe10",
+      "method": "GET",
+      "modified": "2022-03-03T12:49:11.668Z",
+      "created": "2022-03-03T12:40:56.359Z",
+      "_id": "00f9170d-340c-4bf1-860a-b65eb48da825",
+      "params": [],
+      "auth": {
+        "type": "bearer",
+        "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjIwYTc1YzA4MTc1Mjg2NDA4NzcyZjUiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2NDYzMTExOTYsImV4cCI6MTY0NjM5NzU5Nn0.acUuZNmKrOtcdATQajxu82OngpcIAYhrCjXgyB-OOCw"
+      },
+      "tests": []
+    },
+    {
+      "containerId": "",
+      "sortNum": 50000,
+      "headers": [
+        { "name": "Accept", "value": "*/*" },
+        {
+          "name": "User-Agent",
+          "value": "Thunder Client (https://www.thunderclient.com)"
+        }
+      ],
+      "colId": "be713cf5-a6c9-47be-a1f4-046612a2bf0a",
+      "name": "Categories list",
+      "url": "http://localhost:5000/api/v1/categories",
+      "method": "GET",
+      "modified": "2022-03-03T12:51:06.516Z",
+      "created": "2022-03-03T12:49:45.495Z",
+      "_id": "d9c125de-9c1b-432d-9b7c-bef2ef1fd26f",
+      "params": [],
+      "tests": []
+    }
+  ]
+}
