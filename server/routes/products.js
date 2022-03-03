@@ -2,7 +2,6 @@ import express from "express";
 import Product from "../models/Product.js";
 import Category from "../models/Category.js";
 import uploadFile from "../helpers/uploadFile.js";
-import mongoose from "mongoose";
 
 const router = express.Router();
 
@@ -33,6 +32,7 @@ router.get(`/:id`, (req, res) => {
     });
 });
 
+// create a new product
 router.post(`/`, uploadFile().single("image"), (req, res) => {
   const file = req.file;
   if (!file) {
@@ -69,6 +69,7 @@ router.post(`/`, uploadFile().single("image"), (req, res) => {
     });
 });
 
+// Update Product
 router.put("/:id", uploadFile().single("image"), (req, res) => {
   return Category.findById(req.body.category)
     .then((category) => {
@@ -109,6 +110,24 @@ router.put("/:id", uploadFile().single("image"), (req, res) => {
         .catch(() => res.status(400).json({ message: "Invalid Product!" }));
     })
     .catch(() => res.status(400).json({ message: "Invalid Category" }));
+});
+
+// delete product
+router.delete("/:id", (req, res) => {
+  return Product.findByIdAndRemove(req.params.id)
+    .then((product) => {
+      if (!product) {
+        return res
+          .status(404)
+          .json({ success: false, message: "product not found!" });
+      }
+      return res
+          .status(200)
+          .json({ success: true, message: "the product is deleted!" });
+    })
+    .catch((err) => {
+      return res.status(500).json({ success: false, error: err });
+    });
 });
 
 export default router;
