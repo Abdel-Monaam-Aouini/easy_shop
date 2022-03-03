@@ -66,7 +66,8 @@ router.post("/login", async (req, res) => {
     });
 });
 
-router.get(`/`, async (req, res) => {
+// get Users List
+router.get(`/`, (req, res) => {
   return User.find()
     .select("-passwordHash")
     .then((userList) => {
@@ -74,6 +75,24 @@ router.get(`/`, async (req, res) => {
         return res.status(500).json({ success: false });
       }
       return res.status(200).json(userList);
+    });
+});
+
+router.get("/:id", (req, res) => {
+  return User.findById(req.params.id)
+    .select("-passwordHash")
+    .then((user) => {
+      if (!user) {
+        return res
+          .status(500)
+          .json({ message: "The user with the given ID was not found." });
+      }
+      return res.status(200).json(user);
+    })
+    .catch(() => {
+      return res
+        .status(500)
+        .json({ message: "The user with the given ID was not found." });
     });
 });
 
