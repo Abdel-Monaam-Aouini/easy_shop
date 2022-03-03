@@ -2,7 +2,7 @@ import express from "express";
 import User from "../models/User.js";
 import bcrypt from "bcrypt";
 import config from "../config.js";
-import jwt from "jsonwebtoken"
+import jwt from "jsonwebtoken";
 
 const router = express.Router();
 
@@ -63,6 +63,17 @@ router.post("/login", async (req, res) => {
     .catch((err) => {
       console.error(`[ERROR] - user not found: ${err.message}`);
       return res.status(404).send("User not found !");
+    });
+});
+
+router.get(`/`, async (req, res) => {
+  return User.find()
+    .select("-passwordHash")
+    .then((userList) => {
+      if (!userList) {
+        return res.status(500).json({ success: false });
+      }
+      return res.status(200).json(userList);
     });
 });
 
