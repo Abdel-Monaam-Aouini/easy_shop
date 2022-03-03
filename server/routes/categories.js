@@ -24,7 +24,7 @@ router.get("/:id", (req, res) => {
 });
 
 // create a new category
-router.post("/", async (req, res) => {
+router.post("/", (req, res) => {
   const { name, icon, color } = req.body;
   return Category.create({ name, icon, color })
     .then((category) => res.status(200).json(category))
@@ -32,6 +32,22 @@ router.post("/", async (req, res) => {
       console.log(`[ERROR] - error creating category: ${err.message}`);
       return res.status(400).send("the category cannot be created!");
     });
+});
+
+// Update category
+router.put("/:id", (req, res) => {
+  const { name, icon, color } = req.body;
+  return Category.findByIdAndUpdate(
+    req.params.id,
+    {
+      name,
+      icon: icon || category.icon,
+      color,
+    },
+    { new: true }
+  )
+    .then((category) => res.status(200).json(category))
+    .catch(() => res.status(400).send("the category cannot be created!"));
 });
 
 export default router;
