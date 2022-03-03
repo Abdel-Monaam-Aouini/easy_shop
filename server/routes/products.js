@@ -131,15 +131,47 @@ router.delete("/:id", (req, res) => {
 });
 
 router.get(`/get/count`, (req, res) => {
-  return Product.countDocuments((productCount) => {
-    if (!productCount) {
+  return Product.countDocuments()
+    .then((productCount) => {
+      if (!productCount) {
+        return res.status(500).json({ success: false });
+      }
+      return res.status(200).json({
+        success: true,
+        productCount,
+      });
+    })
+    .catch(() => {
       return res.status(500).json({ success: false });
-    }
-    return res.status(200).json({
-      success: true,
-      productCount,
     });
-  });
 });
+
+router.put(
+  "/gallery_images/:id",
+  uploadFile().array("images", 10),
+  (req, res) => {
+    const images = req.files.map((file) => file.filename);
+
+    return Product.findByIdAndUpdate(
+      req.params.id,
+      {
+        images,
+      },
+      { new: true }
+    )
+      .then(() =>
+        res
+          .status(200)
+          .json({ success: true, message: "gallery updated successfully!" })
+      )
+      .catch((err) => {
+        console.log(err.message);
+        return res.status(500).json({
+          success: false,
+          message: "the gallery cannot be updated!",
+        });
+      });
+  }
+);
 
 export default router;
