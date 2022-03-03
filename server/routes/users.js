@@ -96,4 +96,34 @@ router.get("/:id", (req, res) => {
     });
 });
 
+// Update the user
+router.put("/:id", (req, res) => {
+  return User.findById(req.params.id)
+    .then((userExist) => {
+      let newPassword;
+      if (req.body.password) {
+        newPassword = bcrypt.hashSync(req.body.password, 10);
+      } else {
+        newPassword = userExist.passwordHash;
+      }
+      return userExist
+        .update({
+          name: req.body.name,
+          email: req.body.email,
+          passwordHash: newPassword,
+          phone: req.body.phone,
+          isAdmin: req.body.isAdmin,
+          street: req.body.street,
+          apartment: req.body.apartment,
+          zip: req.body.zip,
+          city: req.body.city,
+          country: req.body.country,
+        })
+        .then(() => res.status(200).json("User update successfully !"));
+    })
+    .catch(() => {
+      return res.status(400).send("User not found!");
+    });
+});
+
 export default router;
