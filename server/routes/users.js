@@ -1,12 +1,24 @@
 import express from "express";
 import User from "../models/User.js";
-import bcrypt from 'bcrypt';
+import bcrypt from "bcrypt";
+import config from "../config.js";
+import jwt from "jsonwebtoken"
 
 const router = express.Router();
 
 router.post("/register", async (req, res) => {
-  const { name, email, password, phone, isAdmin,
-    street, apartment, zip, city, country } = req.body;
+  const {
+    name,
+    email,
+    password,
+    phone,
+    isAdmin,
+    street,
+    apartment,
+    zip,
+    city,
+    country,
+  } = req.body;
 
   return User.create({
     name,
@@ -24,6 +36,33 @@ router.post("/register", async (req, res) => {
     .catch((err) => {
       console.error(`[ERROR] - register user failed: ${err.message}`);
       return res.status(400).send("the user cannot be created!");
+    });
+});
+
+router.post("/login", async (req, res) => {
+  const { email, password } = req.body;
+  return User.findOne({ email })
+    .then((user) => {
+      if (!user) {
+        return res.status(400).json("The user not found");
+      }
+      if (user && bcrypt.compareSync(password, user.passwordHash)) {
+        const token = jwt.sign(
+          {
+            userId: user.id,
+            isAdmin: user.isAdmin,
+          },
+          config.secret,
+          { expiresIn: "1d" }
+        );
+        res.status(200).send({ user: user.email, token: token });
+      } else {
+        res.status(400).send("password is wrong!");
+      }
+    })
+    .catch((err) => {
+      console.error(`[ERROR] - user not found: ${err.message}`);
+      return res.status(404).send("User not found !");
     });
 });
 
