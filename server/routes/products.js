@@ -122,12 +122,24 @@ router.delete("/:id", (req, res) => {
           .json({ success: false, message: "product not found!" });
       }
       return res
-          .status(200)
-          .json({ success: true, message: "the product is deleted!" });
+        .status(200)
+        .json({ success: true, message: "the product is deleted!" });
     })
     .catch((err) => {
       return res.status(500).json({ success: false, error: err });
     });
+});
+
+router.get(`/get/count`, (req, res) => {
+  return Product.countDocuments((productCount) => {
+    if (!productCount) {
+      return res.status(500).json({ success: false });
+    }
+    return res.status(200).json({
+      success: true,
+      productCount,
+    });
+  });
 });
 
 export default router;

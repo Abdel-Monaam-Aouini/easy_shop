@@ -1,4 +1,4 @@
 node_modules
 *.lock
 server/db/
-public/uploads/
+server/public/uploads/
