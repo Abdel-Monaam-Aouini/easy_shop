@@ -16,6 +16,7 @@ Install Dependencies:
 ```sh
     yarn
 ```
+OR
 ```sh
     npm install
 ```
@@ -25,6 +26,7 @@ Run Server:
 ```sh
     yarn start
 ```
+OR
 ```sh
     npm start
 ```
