@@ -102,7 +102,7 @@ ordersRoutes.delete("/:id", (req, res) => {
 });
 
 // get orders by User ID
-router.get(`/get/userorders/:userid`, (req, res) => {
+ordersRoutes.get(`/get/userorders/:userid`, (req, res) => {
   return Order.find({ user: req.params.userid })
     .populate({
       path: "products",
