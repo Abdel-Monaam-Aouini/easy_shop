@@ -51,7 +51,7 @@ productsRoutes.post(`/`, uploadFile().single("image"), (req, res) => {
           richDescription: req.body.richDescription,
           brand: req.body.brand,
           price: req.body.price,
-          image: file.filename,
+          image: file.filename.replace(new RegExp(" ", "g"), "_"),
           category: req.body.category,
           countInStock: req.body.countInStock,
           rating: req.body.rating,

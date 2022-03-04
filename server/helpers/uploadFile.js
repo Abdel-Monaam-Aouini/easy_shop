@@ -18,7 +18,9 @@ const uploadFile = () => {
       cb(uploadError, "public/uploads");
     },
     filename: function (req, file, cb) {
-      const fileName = file.originalname.split(".")[0];
+      const fileName = file.originalname
+        .split(".")[0]
+        .replace(new RegExp(" ", "g"), "_");
       const extension = FILE_TYPE_MAP[file.mimetype];
       cb(null, `${fileName}.${extension}`);
     },
