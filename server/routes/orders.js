@@ -72,16 +72,33 @@ ordersRoutes.post("/", (req, res) => {
 });
 
 // update Status of order
-router.put("/:id", (req, res) => {
-  return Order.findByIdAndUpdate(
-    req.params.id,
-    {
-      status: req.body.status,
-    },
-    { new: true }
-  )
+ordersRoutes.put("/:id", (req, res) => {
+  const {
+    params: { id },
+    body: { status },
+  } = req;
+
+  return Order.findByIdAndUpdate(id, { status }, { new: true })
     .then(() => res.status(200).json({ success: true }))
     .catch(() => res.status(400).send("the order cannot be updated!"));
+});
+
+//delete Order
+ordersRoutes.delete("/:id", (req, res) => {
+  return Order.findByIdAndRemove(req.params.id)
+    .then((order) => {
+      if (!order) {
+        return res
+          .status(404)
+          .json({ success: false, message: "order not found!" });
+      }
+      return res
+        .status(200)
+        .json({ success: true, message: "the order is deleted!" });
+    })
+    .catch((err) => {
+      return res.status(500).json({ success: false, error: err });
+    });
 });
 
 export default ordersRoutes;
