@@ -1,19 +1,9 @@
 import mongoose from "mongoose";
 
 const orderSchema = mongoose.Schema({
-  orderItems: [
-    {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "OrderItem",
-      required: true,
-    },
-  ],
-  shippingAddress1: {
+  address: {
     type: String,
     required: true,
-  },
-  shippingAddress2: {
-    type: String,
   },
   city: {
     type: String,
@@ -43,6 +33,16 @@ const orderSchema = mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: "User",
   },
+  quantity: {
+    type: Number,
+    required: true,
+  },
+  products: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Product",
+    },
+  ],
   dateOrdered: {
     type: Date,
     default: Date.now,

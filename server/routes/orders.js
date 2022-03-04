@@ -24,11 +24,8 @@ ordersRoutes.get(`/:id`, (req, res) => {
   return Order.findById(req.params.id)
     .populate("user", "name")
     .populate({
-      path: "orderItems",
-      populate: {
-        path: "product",
-        populate: "category",
-      },
+      path: "product",
+      populate: "category",
     })
     .then((order) => {
       if (!order) {
@@ -38,6 +35,31 @@ ordersRoutes.get(`/:id`, (req, res) => {
     })
     .catch((err) =>
       res.status(500).json({ success: false, message: err.message })
+    );
+});
+
+// create a new order
+ordersRoutes.post("/", (req, res) => {
+  const {
+    city, products, country, status, totalPrice,
+    phone, user, quantity, zip, address
+  } = req.body;
+
+  return Order.create({
+    address,
+    city,
+    zip,
+    country,
+    phone,
+    status,
+    totalPrice,
+    user,
+    quantity,
+    products,
+  })
+    .then((order) => res.status(200).json({ success: true, data: order }))
+    .catch((err) =>
+      res.status(400).json({ success: false, message: err.message })
     );
 });
 
