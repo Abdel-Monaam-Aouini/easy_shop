@@ -8,13 +8,6 @@
     {
       "containerId": "",
       "sortNum": 10000,
-      "headers": [
-        { "name": "Accept", "value": "*/*" },
-        {
-          "name": "User-Agent",
-          "value": "Thunder Client (https://www.thunderclient.com)"
-        }
-      ],
       "colId": "be713cf5-a6c9-47be-a1f4-046612a2bf0a",
       "name": "Delete Category",
       "url": "http://localhost:5000/api/v1/categories/6220ab543b5e3445a8aafe10",
@@ -61,13 +54,6 @@
     {
       "containerId": "",
       "sortNum": 30000,
-      "headers": [
-        { "name": "Accept", "value": "*/*" },
-        {
-          "name": "User-Agent",
-          "value": "Thunder Client (https://www.thunderclient.com)"
-        }
-      ],
       "colId": "be713cf5-a6c9-47be-a1f4-046612a2bf0a",
       "name": "Update Category",
       "url": "http://localhost:5000/api/v1/categories/6220ab543b5e3445a8aafe10",
@@ -90,13 +76,6 @@
     {
       "containerId": "",
       "sortNum": 40000,
-      "headers": [
-        { "name": "Accept", "value": "*/*" },
-        {
-          "name": "User-Agent",
-          "value": "Thunder Client (https://www.thunderclient.com)"
-        }
-      ],
       "colId": "be713cf5-a6c9-47be-a1f4-046612a2bf0a",
       "name": "Get Category By ID",
       "url": "http://localhost:5000/api/v1/categories/6220ab543b5e3445a8aafe10",
@@ -114,13 +93,6 @@
     {
       "containerId": "",
       "sortNum": 50000,
-      "headers": [
-        { "name": "Accept", "value": "*/*" },
-        {
-          "name": "User-Agent",
-          "value": "Thunder Client (https://www.thunderclient.com)"
-        }
-      ],
       "colId": "be713cf5-a6c9-47be-a1f4-046612a2bf0a",
       "name": "Categories list",
       "url": "http://localhost:5000/api/v1/categories",

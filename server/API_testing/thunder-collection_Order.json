@@ -1,0 +1,135 @@
+{
+  "client": "Thunder Client",
+  "collectionName": "Order",
+  "dateExported": "2022-03-04T18:37:47.483Z",
+  "version": "1.1",
+  "folders": [],
+  "requests": [
+    {
+      "containerId": "",
+      "sortNum": 10000,
+      "colId": "2574ab62-b7c5-40c0-8694-1ffafdc1fc52",
+      "name": "Orders List",
+      "url": "http://localhost:5000/api/v1/orders",
+      "method": "GET",
+      "modified": "2022-03-04T17:46:24.112Z",
+      "created": "2022-03-04T17:44:53.793Z",
+      "_id": "43cab641-ea81-4cda-b68d-69050a1d5a84",
+      "params": [],
+      "tests": []
+    },
+    {
+      "containerId": "",
+      "sortNum": 20000,
+      "colId": "2574ab62-b7c5-40c0-8694-1ffafdc1fc52",
+      "name": "Create Order",
+      "url": "http://localhost:5000/api/v1/orders",
+      "method": "POST",
+      "modified": "2022-03-04T18:00:15.668Z",
+      "created": "2022-03-04T17:50:24.817Z",
+      "_id": "f8d048c5-ee3b-4e42-8b2e-d1e1745e545a",
+      "params": [],
+      "body": {
+        "type": "json",
+        "raw": "{ \n    \"city\": \"tunis\",\n    \"products\": [\n        \"6220ccded09ec8ad7fb050f0\",\n        \"6220fe321a17b72191141947\"\n    ],\n    \"country\": \"kairouan\",\n    \"status\": \"delievered\",\n    \"totalPrice\": 20,\n    \"phone\":23345666,\n    \"user\": \"6220a75c08175286408772f5\",\n    \"quantity\": 2,\n    \"address\": \"rue hamdd\"\n}",
+        "form": []
+      },
+      "auth": {
+        "type": "bearer",
+        "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjIwYTc1YzA4MTc1Mjg2NDA4NzcyZjUiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2NDY0MTU4NTksImV4cCI6MTY0NjUwMjI1OX0.gyVf4DyoawswlpGicydZzOuNbrTPM4ETT82jP6FNW-4"
+      },
+      "tests": []
+    },
+    {
+      "containerId": "",
+      "sortNum": 30000,
+      "headers": [],
+      "colId": "2574ab62-b7c5-40c0-8694-1ffafdc1fc52",
+      "name": "Get Order By ID",
+      "url": "http://localhost:5000/api/v1/orders/6222538d97a2189be7a038ac",
+      "method": "GET",
+      "modified": "2022-03-04T18:25:56.993Z",
+      "created": "2022-03-04T18:01:11.551Z",
+      "_id": "07f6d208-d19f-4bd1-bca2-fb7a1134d24c",
+      "params": [],
+      "tests": []
+    },
+    {
+      "containerId": "",
+      "sortNum": 40000,
+      "headers": [],
+      "colId": "2574ab62-b7c5-40c0-8694-1ffafdc1fc52",
+      "name": "Update Order Status",
+      "url": "http://localhost:5000/api/v1/orders/6222538d97a2189be7a038ac",
+      "method": "PUT",
+      "modified": "2022-03-04T18:29:27.065Z",
+      "created": "2022-03-04T18:27:59.304Z",
+      "_id": "aa2b376d-4ad3-4125-9bc2-73f380b1d009",
+      "params": [],
+      "body": {
+        "type": "json",
+        "raw": "{\n    \"status\": \"completed\"\n}",
+        "form": []
+      },
+      "auth": {
+        "type": "bearer",
+        "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjIwYTc1YzA4MTc1Mjg2NDA4NzcyZjUiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2NDY0MTU4NTksImV4cCI6MTY0NjUwMjI1OX0.gyVf4DyoawswlpGicydZzOuNbrTPM4ETT82jP6FNW-4"
+      },
+      "tests": []
+    },
+    {
+      "containerId": "",
+      "sortNum": 50000,
+      "headers": [],
+      "colId": "2574ab62-b7c5-40c0-8694-1ffafdc1fc52",
+      "name": "Delete Order",
+      "url": "http://localhost:5000/api/v1/orders/6222538d97a2189be7a038ac",
+      "method": "DELETE",
+      "modified": "2022-03-04T18:30:49.722Z",
+      "created": "2022-03-04T18:30:29.971Z",
+      "_id": "1fb3ac77-1dbe-44df-b31b-8465cd3eaf2d",
+      "params": [],
+      "auth": {
+        "type": "bearer",
+        "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjIwYTc1YzA4MTc1Mjg2NDA4NzcyZjUiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2NDY0MTU4NTksImV4cCI6MTY0NjUwMjI1OX0.gyVf4DyoawswlpGicydZzOuNbrTPM4ETT82jP6FNW-4"
+      },
+      "tests": []
+    },
+    {
+      "containerId": "",
+      "sortNum": 60000,
+      "headers": [],
+      "colId": "2574ab62-b7c5-40c0-8694-1ffafdc1fc52",
+      "name": "Get User Orders",
+      "url": "http://localhost:5000/api/v1/orders/get/userorders/6220a75c08175286408772f5",
+      "method": "GET",
+      "modified": "2022-03-04T18:32:52.506Z",
+      "created": "2022-03-04T18:31:58.407Z",
+      "_id": "5aa72685-d368-4c3d-9b43-58de7f81c7bd",
+      "params": [],
+      "auth": {
+        "type": "bearer",
+        "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjIwYTc1YzA4MTc1Mjg2NDA4NzcyZjUiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2NDY0MTU4NTksImV4cCI6MTY0NjUwMjI1OX0.gyVf4DyoawswlpGicydZzOuNbrTPM4ETT82jP6FNW-4"
+      },
+      "tests": []
+    },
+    {
+      "containerId": "",
+      "sortNum": 70000,
+      "headers": [],
+      "colId": "2574ab62-b7c5-40c0-8694-1ffafdc1fc52",
+      "name": "Get Count Orders",
+      "url": "http://localhost:5000/api/v1/orders/get/count",
+      "method": "GET",
+      "modified": "2022-03-04T18:37:29.019Z",
+      "created": "2022-03-04T18:36:15.395Z",
+      "_id": "2af36f20-f072-45f3-96eb-9b3433c9681a",
+      "params": [],
+      "auth": {
+        "type": "bearer",
+        "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjIwYTc1YzA4MTc1Mjg2NDA4NzcyZjUiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2NDY0MTU4NTksImV4cCI6MTY0NjUwMjI1OX0.gyVf4DyoawswlpGicydZzOuNbrTPM4ETT82jP6FNW-4"
+      },
+      "tests": []
+    }
+  ]
+}

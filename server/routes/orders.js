@@ -7,8 +7,9 @@ const ordersRoutes = express.Router();
 ordersRoutes.get(`/`, (req, res) => {
   return Order.find()
     .populate("user", "name")
+    .populate("products", "name")
     .sort({ dateOrdered: -1 })
-    .then(() => {
+    .then((orderList) => {
       if (!orderList) {
         return res.status(500).json({ success: false });
       }
@@ -49,14 +50,12 @@ ordersRoutes.post("/", (req, res) => {
     phone,
     user,
     quantity,
-    zip,
     address,
   } = req.body;
 
   return Order.create({
     address,
     city,
-    zip,
     country,
     phone,
     status,
@@ -79,7 +78,7 @@ ordersRoutes.put("/:id", (req, res) => {
   } = req;
 
   return Order.findByIdAndUpdate(id, { status }, { new: true })
-    .then(() => res.status(200).json({ success: true }))
+    .then((order) => res.status(200).json({ success: true, data: order }))
     .catch(() => res.status(400).send("the order cannot be updated!"));
 });
 
@@ -122,24 +121,21 @@ ordersRoutes.get("/get/totalsales", (req, res) => {
   return Order.aggregate()
     .group({
       _id: null,
-      totalsales: { $sum: "$totalPrice" },
+      totalSales: { $sum: "$totalPrice" },
     })
-    .then(([totalSales]) => {
-      if (!totalSales) {
-        return res.status(400).send("The order sales cannot be generated");
-      }
-      return res.status(200).json({ succes: true, data: totalsales });
-    });
+    .then(([{ totalSales }]) => {
+      return res.status(200).json({ succes: true, data: { totalSales } });
+    })
+    .catch((err) =>
+      res.status(400).json({ succes: false, message: err.message })
+    );
 });
 
 // GET Count Orders
 ordersRoutes.get(`/get/count`, (req, res) => {
   return Order.countDocuments()
     .then((orderCount) => {
-      if (!orderCount) {
-        return res.status(500).json({ success: false });
-      }
-      return res.status(200).json({ success: true, orderCount });
+      return res.status(200).json({ success: true, data: { orderCount } });
     })
     .catch((err) =>
       res.status(500).json({ success: false, message: err.message })

@@ -8,13 +8,6 @@
     {
       "containerId": "",
       "sortNum": 10000,
-      "headers": [
-        { "name": "Accept", "value": "*/*" },
-        {
-          "name": "User-Agent",
-          "value": "Thunder Client (https://www.thunderclient.com)"
-        }
-      ],
       "colId": "eed7e5ee-f646-48ff-83d3-e91a5a259fb0",
       "name": "Users List",
       "url": "http://localhost:5000/api/v1/users",
@@ -32,13 +25,6 @@
     {
       "containerId": "",
       "sortNum": 20000,
-      "headers": [
-        { "name": "Accept", "value": "*/*" },
-        {
-          "name": "User-Agent",
-          "value": "Thunder Client (https://www.thunderclient.com)"
-        }
-      ],
       "colId": "eed7e5ee-f646-48ff-83d3-e91a5a259fb0",
       "name": "Register",
       "url": "http://localhost:5000/api/v1/users/register",
@@ -58,13 +44,6 @@
     {
       "containerId": "",
       "sortNum": 30000,
-      "headers": [
-        { "name": "Accept", "value": "*/*" },
-        {
-          "name": "User-Agent",
-          "value": "Thunder Client (https://www.thunderclient.com)"
-        }
-      ],
       "colId": "eed7e5ee-f646-48ff-83d3-e91a5a259fb0",
       "name": "Login",
       "url": "http://localhost:5000/api/v1/users/login",

@@ -8,13 +8,6 @@
     {
       "containerId": "",
       "sortNum": 10000,
-      "headers": [
-        { "name": "Accept", "value": "*/*" },
-        {
-          "name": "User-Agent",
-          "value": "Thunder Client (https://www.thunderclient.com)"
-        }
-      ],
       "colId": "9fa638bf-3fb0-4474-9e60-e37839be3ff3",
       "name": "Get Products Lists",
       "url": "http://localhost:5000/api/v1/products",
@@ -37,13 +30,6 @@
     {
       "containerId": "",
       "sortNum": 20000,
-      "headers": [
-        { "name": "Accept", "value": "*/*" },
-        {
-          "name": "User-Agent",
-          "value": "Thunder Client (https://www.thunderclient.com)"
-        }
-      ],
       "colId": "9fa638bf-3fb0-4474-9e60-e37839be3ff3",
       "name": "Form Create Product",
       "url": "http://localhost:5000/api/v1/products",
@@ -77,13 +63,6 @@
     {
       "containerId": "",
       "sortNum": 30000,
-      "headers": [
-        { "name": "Accept", "value": "*/*" },
-        {
-          "name": "User-Agent",
-          "value": "Thunder Client (https://www.thunderclient.com)"
-        }
-      ],
       "colId": "9fa638bf-3fb0-4474-9e60-e37839be3ff3",
       "name": "Form Update Product",
       "url": "http://localhost:5000/api/v1/products/6220fe501a17b7219114194a",
@@ -117,13 +96,6 @@
     {
       "containerId": "",
       "sortNum": 40000,
-      "headers": [
-        { "name": "Accept", "value": "*/*" },
-        {
-          "name": "User-Agent",
-          "value": "Thunder Client (https://www.thunderclient.com)"
-        }
-      ],
       "colId": "9fa638bf-3fb0-4474-9e60-e37839be3ff3",
       "name": "Delete Product",
       "url": "http://localhost:5000/api/v1/products/6220fe501a17b7219114194a",
@@ -141,13 +113,6 @@
     {
       "containerId": "",
       "sortNum": 50000,
-      "headers": [
-        { "name": "Accept", "value": "*/*" },
-        {
-          "name": "User-Agent",
-          "value": "Thunder Client (https://www.thunderclient.com)"
-        }
-      ],
       "colId": "9fa638bf-3fb0-4474-9e60-e37839be3ff3",
       "name": "Count Products",
       "url": "http://localhost:5000/api/v1/products/get/count",
@@ -165,13 +130,6 @@
     {
       "containerId": "",
       "sortNum": 60000,
-      "headers": [
-        { "name": "Accept", "value": "*/*" },
-        {
-          "name": "User-Agent",
-          "value": "Thunder Client (https://www.thunderclient.com)"
-        }
-      ],
       "colId": "9fa638bf-3fb0-4474-9e60-e37839be3ff3",
       "name": "gallerie_images Product",
       "url": "http://localhost:5000/api/v1/products/gallery_images/6220d8689ff2349c42e16fc7",
