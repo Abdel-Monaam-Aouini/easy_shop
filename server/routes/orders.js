@@ -117,4 +117,33 @@ router.get(`/get/userorders/:userid`, (req, res) => {
     });
 });
 
+// Get totalsales
+ordersRoutes.get("/get/totalsales", (req, res) => {
+  return Order.aggregate()
+    .group({
+      _id: null,
+      totalsales: { $sum: "$totalPrice" },
+    })
+    .then(([totalSales]) => {
+      if (!totalSales) {
+        return res.status(400).send("The order sales cannot be generated");
+      }
+      return res.status(200).json({ succes: true, data: totalsales });
+    });
+});
+
+// GET Count Orders
+ordersRoutes.get(`/get/count`, (req, res) => {
+  return Order.countDocuments()
+    .then((orderCount) => {
+      if (!orderCount) {
+        return res.status(500).json({ success: false });
+      }
+      return res.status(200).json({ success: true, orderCount });
+    })
+    .catch((err) =>
+      res.status(500).json({ success: false, message: err.message })
+    );
+});
+
 export default ordersRoutes;
