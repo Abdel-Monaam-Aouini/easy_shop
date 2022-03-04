@@ -9,6 +9,7 @@ import errorHandler from "./helpers/error-handler.js";
 import usersRoutes from "./routes/users.js";
 import productsRoutes from "./routes/products.js";
 import categoriesRoutes from "./routes/categories.js";
+import ordersRoutes from "./routes/orders.js";
 
 const app = express();
 
@@ -29,6 +30,7 @@ const { MONGO_URI, API_URL } = config;
 app.use(`${API_URL}/users`, usersRoutes);
 app.use(`${API_URL}/categories`, categoriesRoutes);
 app.use(`${API_URL}/products`, productsRoutes);
+app.use(`${API_URL}/orders`, ordersRoutes);
 
 mongoose
   .connect(MONGO_URI, {
