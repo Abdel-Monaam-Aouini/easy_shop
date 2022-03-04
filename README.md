@@ -14,11 +14,17 @@ Dockerize mongodb :
 Install Dependencies:
 
 ```sh
-    yarn || npm install
+    yarn
+```
+```sh
+    npm install
 ```
 
 Run Server:
 
 ```sh
     yarn start
+```
+```sh
+    npm start
 ```
