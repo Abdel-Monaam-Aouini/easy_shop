@@ -24,7 +24,7 @@ ordersRoutes.get(`/:id`, (req, res) => {
   return Order.findById(req.params.id)
     .populate("user", "name")
     .populate({
-      path: "product",
+      path: "products",
       populate: "category",
     })
     .then((order) => {
@@ -98,6 +98,22 @@ ordersRoutes.delete("/:id", (req, res) => {
     })
     .catch((err) => {
       return res.status(500).json({ success: false, error: err });
+    });
+});
+
+// get orders by User ID
+router.get(`/get/userorders/:userid`, (req, res) => {
+  return Order.find({ user: req.params.userid })
+    .populate({
+      path: "products",
+      populate: "category",
+    })
+    .sort({ dateOrdered: -1 })
+    .then((userOrderList) => {
+      if (!userOrderList) {
+        return res.status(500).json({ success: false });
+      }
+      return res.status(200).json({ success: true, data: userOrderList });
     });
 });
 
