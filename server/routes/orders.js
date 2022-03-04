@@ -41,8 +41,16 @@ ordersRoutes.get(`/:id`, (req, res) => {
 // create a new order
 ordersRoutes.post("/", (req, res) => {
   const {
-    city, products, country, status, totalPrice,
-    phone, user, quantity, zip, address
+    city,
+    products,
+    country,
+    status,
+    totalPrice,
+    phone,
+    user,
+    quantity,
+    zip,
+    address,
   } = req.body;
 
   return Order.create({
@@ -61,6 +69,19 @@ ordersRoutes.post("/", (req, res) => {
     .catch((err) =>
       res.status(400).json({ success: false, message: err.message })
     );
+});
+
+// update Status of order
+router.put("/:id", (req, res) => {
+  return Order.findByIdAndUpdate(
+    req.params.id,
+    {
+      status: req.body.status,
+    },
+    { new: true }
+  )
+    .then(() => res.status(200).json({ success: true }))
+    .catch(() => res.status(400).send("the order cannot be updated!"));
 });
 
 export default ordersRoutes;
