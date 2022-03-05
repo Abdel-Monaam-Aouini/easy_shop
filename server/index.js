@@ -44,7 +44,7 @@ mongoose
     console.log(`🗃   MongoDB connected`);
     return server.listen({ port: PORT });
   })
-  .then((res) => {
+  .then(() => {
     console.log(`🚀  Server ready at http://localhost:${PORT}`);
   });
 
