@@ -11,26 +11,28 @@ import productsRoutes from "./routes/products.js";
 import categoriesRoutes from "./routes/categories.js";
 import ordersRoutes from "./routes/orders.js";
 
-const app = express();
+const server = express();
 
 const __dirname = path.resolve();
 
-app.use(cors());
-app.options("*", cors());
+server.use(cors());
+server.options("*", cors());
 
 //middleware
-app.use(express.json());
-app.use(morgan("tiny"));
-app.use(authJwt());
-app.use("/public/uploads", express.static(__dirname + "/public/uploads"));
-app.use(errorHandler);
+server.use(express.json());
+server.use(morgan("tiny"));
+server.use(authJwt());
+server.use("/public/uploads", express.static(__dirname + "/public/uploads"));
+server.use(errorHandler);
 
 const { MONGO_URI, API_URL } = config;
 
-app.use(`${API_URL}/users`, usersRoutes);
-app.use(`${API_URL}/categories`, categoriesRoutes);
-app.use(`${API_URL}/products`, productsRoutes);
-app.use(`${API_URL}/orders`, ordersRoutes);
+server.use(`${API_URL}/users`, usersRoutes);
+server.use(`${API_URL}/categories`, categoriesRoutes);
+server.use(`${API_URL}/products`, productsRoutes);
+server.use(`${API_URL}/orders`, ordersRoutes);
+
+const PORT = process.env.PORT || 9000;
 
 mongoose
   .connect(MONGO_URI, {
@@ -38,12 +40,12 @@ mongoose
     useUnifiedTopology: true,
     dbName: "eshop-database",
   })
-  .then(() => console.log("Database Connection is ready..."))
-  .catch((err) => console.log(err));
+  .then(() => {
+    console.log(`🗃   MongoDB connected`);
+    return server.listen({ port: PORT });
+  })
+  .then((res) => {
+    console.log(`🚀  Server ready at http://localhost:${PORT}`);
+  });
 
 mongoose.set("debug", true);
-
-//Server
-app.listen(5000, () => {
-  console.log("server is running http://localhost:5000");
-});
