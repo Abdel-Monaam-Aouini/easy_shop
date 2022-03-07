@@ -1,6 +1,0 @@
-node_modules
-*.lock
-server/db/
-server/public/uploads/
-.parcel-cache
-dist
