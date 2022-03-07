@@ -7,9 +7,7 @@ import {
 } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
 
-const stripePromise = loadStripe(
-  "pk_test_51KajLFFgaJDcE6bROYLX8AA3AxM4Ebczk94bUogl6if9uBhANEp9DaE1nYT5dkp0fNJqFP6UVwgMsjP9X8Ptr0NP00CVXnhiHs"
-);
+const stripePromise = loadStripe(import.meta.env.VITE_APP_STRIPE_API_KEY);
 
 const Payment = ({
   user,
