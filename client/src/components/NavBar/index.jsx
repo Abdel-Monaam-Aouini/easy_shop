@@ -6,10 +6,12 @@ import {
   IconButton,
   Badge,
   Typography,
+  Avatar,
 } from "@mui/material";
 import { ShoppingCart } from "@mui/icons-material";
 import { Link, useLocation } from "react-router-dom";
-import logo from "./logo.jpg";
+import logo from "./icon_easy_shop.ico";
+import "./style.css";
 
 function NavBar() {
   return (
@@ -23,12 +25,7 @@ function NavBar() {
               className="custom-title"
               color="inherit"
             >
-              <img
-                src={logo}
-                alt="logo"
-                height="25px"
-                className="logo"
-              />
+              <Avatar alt="logo" src={logo} sx={{ width: 56, height: 56 }} />
             </Typography>
             <div className="basket-wrapper">
               <h2>
