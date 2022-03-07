@@ -1,5 +1,5 @@
 import React from "react";
-import { CssBaseline } from "@mui/material";
+import { Container, CssBaseline } from "@mui/material";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
@@ -9,7 +9,7 @@ import Checkout from "./components/Checkout/Checkout";
 
 const App = () => {
   return (
-    <>
+    <Container>
       <CssBaseline />
       <NavBar />
       <BrowserRouter>
@@ -20,7 +20,7 @@ const App = () => {
         </Routes>
       </BrowserRouter>
       <Footer />
-    </>
+    </Container>
   );
 };
 

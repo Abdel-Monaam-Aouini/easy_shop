@@ -9,7 +9,6 @@ import {
   Avatar,
 } from "@mui/material";
 import { ShoppingCart } from "@mui/icons-material";
-import { Link, useLocation } from "react-router-dom";
 import logo from "./icon_easy_shop.ico";
 import "./style.css";
 
