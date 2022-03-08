@@ -8,8 +8,9 @@ import authJwt from "./helpers/jwt.js";
 import errorHandler from "./helpers/error-handler.js";
 import usersRoutes from "./routes/users.js";
 import productsRoutes from "./routes/products.js";
-import categoriesRoutes from "./routes/categories.js";
 import ordersRoutes from "./routes/orders.js";
+import fetchProducts from "./scrapingAmazon.js";
+import Product from "./models/Product.js";
 
 const server = express();
 
@@ -28,7 +29,6 @@ server.use(errorHandler);
 const { MONGO_URI, API_URL } = config;
 
 server.use(`${API_URL}/users`, usersRoutes);
-server.use(`${API_URL}/categories`, categoriesRoutes);
 server.use(`${API_URL}/products`, productsRoutes);
 server.use(`${API_URL}/orders`, ordersRoutes);
 
@@ -46,6 +46,12 @@ mongoose
   })
   .then(() => {
     console.log(`🚀  Server ready at http://localhost:${PORT}`);
-  });
-
-mongoose.set("debug", true);
+  })
+  // .then(() => {
+  //   return fetchProducts().then((shelves) => {
+  //     return Product.insertMany(shelves)
+  //               .then(console.log)
+  //               .catch(console.error);
+  //   });
+  // });
+//mongoose.set("debug", true);

@@ -24,10 +24,7 @@ ordersRoutes.get(`/`, (req, res) => {
 ordersRoutes.get(`/:id`, (req, res) => {
   return Order.findById(req.params.id)
     .populate("user", "name")
-    .populate({
-      path: "products",
-      populate: "category",
-    })
+    .populate("products")
     .then((order) => {
       if (!order) {
         return res.status(500).json({ success: false });
