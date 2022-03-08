@@ -10,7 +10,6 @@ import {
 } from "@mui/material";
 import "./Product.css";
 
-const { VITE_APP_BASE_URL_IMAGE } = import.meta.env;
 
 const Product = ({ product }) => {
   return (
@@ -21,7 +20,7 @@ const Product = ({ product }) => {
           alt={product.name}
           height="260"
           className="card-image"
-          image={`${VITE_APP_BASE_URL_IMAGE}${product.image}`}
+          image={product.image}
           title={product.name}
         />
         <CardContent className="content">
