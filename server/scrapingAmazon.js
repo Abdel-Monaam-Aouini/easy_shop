@@ -35,7 +35,7 @@ const fetchProducts = async () => {
         .find("div.a-section.a-spacing-none.a-spacing-top-micro > div > span")
         .attr("aria-label");
 
-      const price = ~~shelf.find("span.a-price > span.a-offscreen").text();
+      const price = shelf.find("span.a-price > span.a-offscreen").text();
 
       products.push({
         name,

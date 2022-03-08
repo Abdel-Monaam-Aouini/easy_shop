@@ -48,6 +48,7 @@ mongoose
     console.log(`🚀  Server ready at http://localhost:${PORT}`);
   })
   // .then(() => {
+  //   /** Scraping Data From Amazon */
   //   return fetchProducts().then((shelves) => {
   //     return Product.insertMany(shelves)
   //               .then(console.log)

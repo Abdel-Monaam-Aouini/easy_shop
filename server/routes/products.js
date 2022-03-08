@@ -5,7 +5,7 @@ import uploadFile from "../helpers/uploadFile.js";
 const productsRoutes = express.Router();
 
 productsRoutes.get(`/`, (req, res) => {
-  return Product.find(filter).then((productList) => {
+  return Product.find().then((productList) => {
     if (!productList) {
       return res.status(500).json({ success: false });
     }
