@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer className="footer">
       <p>
-        All &copy; copy rights are reserved to DwinaTech-shopping {fullYear}
+        All &copy; copy rights are reserved to Easy shop Monaam {fullYear}
       </p>
     </footer>
   );

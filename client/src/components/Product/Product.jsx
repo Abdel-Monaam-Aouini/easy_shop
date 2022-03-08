@@ -3,11 +3,14 @@ import {
   Button,
   Card,
   CardActionArea,
+  CardActions,
   CardContent,
   CardMedia,
   Typography,
 } from "@mui/material";
 import "./Product.css";
+
+const { VITE_APP_BASE_URL_IMAGE } = import.meta.env;
 
 const Product = ({ product }) => {
   return (
@@ -15,11 +18,11 @@ const Product = ({ product }) => {
       <CardActionArea>
         <CardMedia
           component="img"
-          alt="Contemplative Reptile"
+          alt={product.name}
           height="260"
           className="card-image"
-          image={product.media.source}
-          title="Contemplative Reptile"
+          image={`${VITE_APP_BASE_URL_IMAGE}${product.image}`}
+          title={product.name}
         />
         <CardContent className="content">
           <Typography
@@ -32,77 +35,61 @@ const Product = ({ product }) => {
           </Typography>
         </CardContent>
       </CardActionArea>
-      {/* {basket && (
-        <CardActions>
-          <Typography
-            className="basket-item-price"
-            gutterBottom
-            variant="h5"
-            component="h2"
-          >
-            {product.price.formatted_with_symbol}
-          </Typography>
-        </CardActions>
-      )} */}
+      <CardActions>
+        <Typography
+          className="basket-item-price"
+          gutterBottom
+          variant="h5"
+          component="h2"
+        >
+          {product.price}
+        </Typography>
+      </CardActions>
       <CardActions className="actions-content">
-        {/* {!basket && (
+        <Button
+          size="large"
+          className="custom-button"
+          // onClick={() => {
+          //   addProduct(product.id, 1);
+          // }}
+        >
+          <ShoppingCart /> Add to basket
+        </Button>
+        <>
+          <Button
+            size="small"
+            color="secondary"
+            variant="outlined"
+            // onClick={() => {
+            //   RemoveItemFromBasket(product.id);
+            // }}
+          >
+            Remove
+          </Button>
           <>
-            <Typography
-              className="price"
-              gutterBottom
-              variant="h5"
-              component="h2"
-            >
-              {product.price.formatted_with_symbol}
-            </Typography>
             <Button
-              size="large"
-              className="custom-button"
-              onClick={() => {
-                addProduct(product.id, 1);
-              }}
+              size="small"
+              variant="outlined"
+              className="increase-product-quantity"
+              // onClick={() => {
+              //   updateProduct(product.id, product.quantity + 1);
+              // }}
             >
-              <ShoppingCart /> Add to basket
+              +
             </Button>
-          </>
-        )} */}
-        {/* {basket && (
-          <>
+            <Typography>&nbsp;{product.quantity}&nbsp;</Typography>
             <Button
               size="small"
               color="secondary"
               variant="outlined"
-              onClick={() => {
-                RemoveItemFromBasket(product.id);
-              }}
+              // onClick={() => {
+              //   updateProduct(product.id, product.quantity - 1);
+              // }}
             >
-              Remove
+              -
             </Button>
-            <>
-              <Button
-                size="small"
-                variant="outlined"
-                className="increase-product-quantity"
-                onClick={() => {
-                  updateProduct(product.id, product.quantity + 1);
-                }}
-              >
-                +
-              </Button>
-              <Typography>&nbsp;{product.quantity}&nbsp;</Typography>
-              <Button
-                size="small"
-                color="secondary"
-                variant="outlined"
-                onClick={() => {
-                  updateProduct(product.id, product.quantity - 1);
-                }}
-              >
-                -
-              </Button>
-            </>
           </>
-        )} */}
+        </>
       </CardActions>
     </Card>
   );

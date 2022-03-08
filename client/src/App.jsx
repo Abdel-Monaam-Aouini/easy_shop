@@ -12,6 +12,7 @@ const App = () => {
     <Container>
       <CssBaseline />
       <NavBar />
+      <Products />
       <BrowserRouter>
         <Routes>
           <Route exact path="/" component={Products} />

@@ -2,8 +2,8 @@ import { Grid, Button, Container } from "@mui/material";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import Spinner from "../Spinner";
-import Banner from "./Banner";
 import "./Basket.css";
+import Banner from "../Banner/Banner";
 
 const Basket = () => {
   const [showSpinner, setShowSpinner] = useState(true);
