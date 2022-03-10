@@ -1,39 +1,59 @@
-import { Grid, Button, Container } from "@mui/material";
+import {
+  Button,
+  Container,
+  Table,
+  TableContainer,
+  TableHead,
+  TableRow,
+  TableCell,
+  TableBody,
+  Paper,
+  Typography,
+} from "@mui/material";
 import { Link } from "react-router-dom";
-import { useState } from "react";
-import Spinner from "../Spinner";
 import "./Basket.css";
-import Banner from "../Banner/Banner";
+import { useRecoilValue } from "recoil";
+import productState from "../../state/productState";
 
 const Basket = () => {
-  const [showSpinner, setShowSpinner] = useState(true);
-  const loading = () => {
-    setTimeout(() => {
-      setShowSpinner(false);
-    }, 2000);
-    if (showSpinner) {
-      return <Spinner />;
-    }
-    return <Banner />;
-  };
+  const products = useRecoilValue(productState);
 
-  //if (!basketData.line_items || !basketData.line_items.length) return loading();
+  if (!products.length) {
+    return (
+      <Typography id="basket" variant="h3" component="div" gutterBottom>
+        No Products Selected ...
+      </Typography>
+    );
+  }
   return (
     <Container id="basket">
-      <Grid container justify="center" spacing={4}>
-        {/* {basketData.line_items.map((item) => {
-          return (
-            <Grid key={item.id} item xs={12} sm={6} md={4}>
-              <CustomCard
-                basket
-                product={item}
-                updateProduct={updateProduct}
-                RemoveItemFromBasket={RemoveItemFromBasket}
-              />
-            </Grid>
-          );
-        })} */}
-      </Grid>
+      <TableContainer component={Paper}>
+        <Table aria-label="simple table">
+          <TableHead>
+            <TableRow>
+              <TableCell>Name</TableCell>
+              <TableCell align="right">Price ($)</TableCell>
+              <TableCell align="right"></TableCell>
+              <TableCell align="right"></TableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {products.map((row) => (
+              <TableRow
+                key={row._id}
+                sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+              >
+                <TableCell component="th" scope="row">
+                  {row.name}
+                </TableCell>
+                <TableCell align="center">{row.price}</TableCell>
+                <TableCell align="center"></TableCell>
+                <TableCell align="center"></TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </TableContainer>
       <div className="actions">
         <Button
           size="small"

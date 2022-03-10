@@ -29,3 +29,13 @@
     color: #bb86fc;
   }
   
+  .link_href{
+    text-decoration: none;
+  }
+  
+  .custom-navbar .shopping-button {
+    color: #000000;
+    background-color: #03dac5;
+    position: relative;
+    left: 50px;
+  }

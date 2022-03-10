@@ -41,79 +41,76 @@ const Products = () => {
   }
 
   return (
-    <>
-      <Banner />
-      <Container id="products">
-        <Grid container spacing={4}>
-          {products.map((product) => (
-            <Grid key={product._id} item xs={12} sm={6} md={4}>
-              <Card className="custom-card">
-                <CardActionArea>
-                  <CardMedia
-                    component="img"
-                    alt={product.name}
-                    height="260"
-                    className="card-image"
-                    image={product.image}
-                    title={product.name}
-                  />
-                  <CardContent className="content">
-                    <Typography
-                      className="title"
-                      gutterBottom
-                      variant="h5"
-                      component="h2"
-                    >
-                      {product.name}
-                    </Typography>
-                  </CardContent>
-                </CardActionArea>
-                <CardActions>
+    <Container id="products">
+      <Grid container spacing={4}>
+        {products.map((product) => (
+          <Grid key={product._id} item xs={12} sm={6} md={4}>
+            <Card className="custom-card">
+              <CardActionArea>
+                <CardMedia
+                  component="img"
+                  alt={product.name}
+                  height="260"
+                  className="card-image"
+                  image={product.image}
+                  title={product.name}
+                />
+                <CardContent className="content">
                   <Typography
-                    className="basket-item-price"
+                    className="title"
                     gutterBottom
                     variant="h5"
                     component="h2"
                   >
-                    $ {product.price}
+                    {product.name}
                   </Typography>
-                </CardActions>
-                <CardActions className="actions-content">
-                  <Grid container justifyContent="space-between">
-                    <Grid item>
-                      <Button
-                        size="small"
-                        className="custom-button"
-                        onClick={() => {
-                          addProduct(product);
-                        }}
-                        disabled={
-                          find(state, ["_id", product._id]) ? true : false
-                        }
-                      >
-                        <ShoppingCart /> Add to basket
-                      </Button>
-                    </Grid>
-                    <Grid item>
-                      <Button
-                        size="small"
-                        color="secondary"
-                        variant="outlined"
-                        onClick={() => {
-                          RemoveItemFromBasket(product._id);
-                        }}
-                      >
-                        Remove
-                      </Button>
-                    </Grid>
+                </CardContent>
+              </CardActionArea>
+              <CardActions>
+                <Typography
+                  className="basket-item-price"
+                  gutterBottom
+                  variant="h5"
+                  component="h2"
+                >
+                  $ {product.price}
+                </Typography>
+              </CardActions>
+              <CardActions className="actions-content">
+                <Grid container justifyContent="space-between">
+                  <Grid item>
+                    <Button
+                      size="small"
+                      className="custom-button"
+                      onClick={() => {
+                        addProduct(product);
+                      }}
+                      disabled={
+                        find(state, ["_id", product._id]) ? true : false
+                      }
+                    >
+                      <ShoppingCart /> Add to basket
+                    </Button>
                   </Grid>
-                </CardActions>
-              </Card>
-            </Grid>
-          ))}
-        </Grid>
-      </Container>
-    </>
+                  <Grid item>
+                    <Button
+                      size="small"
+                      color="secondary"
+                      variant="outlined"
+                      onClick={() => {
+                        RemoveItemFromBasket(product._id);
+                      }}
+                    >
+                      Remove
+                    </Button>
+                  </Grid>
+                </Grid>
+              </CardActions>
+            </Card>
+          </Grid>
+        ))}
+      </Grid>
+    </Container>
   );
 };
 

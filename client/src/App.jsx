@@ -1,12 +1,13 @@
 import React from "react";
 import { RecoilRoot } from "recoil";
 import { Container, CssBaseline } from "@mui/material";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
 import Products from "./components/Products/Products";
 import Basket from "./components/Basket/Basket";
 import Checkout from "./components/Checkout/Checkout";
+import Banner from "./components/Banner/Banner";
 
 const App = () => {
   return (
@@ -14,14 +15,12 @@ const App = () => {
       <Container>
         <CssBaseline />
         <NavBar />
-        <Products />
-        <BrowserRouter>
-          <Routes>
-            <Route exact path="/" component={Products} />
-            <Route exact path="/basket" component={Basket} />
-            <Route exact path="/checkout" component={Checkout} />
-          </Routes>
-        </BrowserRouter>
+        <Routes>
+          <Route exact path="/" element={<Banner />} />
+          <Route exact path="/products" element={<Products />} />
+          <Route exact path="/basket" element={<Basket />} />
+          <Route exact path="/checkout" element={<Checkout />} />
+        </Routes>
         <Footer />
       </Container>
     </RecoilRoot>

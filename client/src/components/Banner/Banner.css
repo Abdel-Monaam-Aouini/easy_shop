@@ -27,9 +27,13 @@
     font-family: "Roboto", sans-serif;
   }
   
-  .banner a.shopping-button {
+  .banner .shopping-button {
     color: #000000;
     background-color: #03dac5;
+  }
+
+  .link_href{
+    text-decoration: none;
   }
   
   @media (min-width: 800px) {
