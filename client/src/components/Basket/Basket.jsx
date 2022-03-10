@@ -32,9 +32,9 @@ const Basket = () => {
           <TableHead>
             <TableRow>
               <TableCell>Name</TableCell>
-              <TableCell align="right">Price ($)</TableCell>
-              <TableCell align="right"></TableCell>
-              <TableCell align="right"></TableCell>
+              <TableCell align="center">Price ($)</TableCell>
+              <TableCell align="center"></TableCell>
+              <TableCell align="center"></TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -43,8 +43,8 @@ const Basket = () => {
                 key={row._id}
                 sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
               >
-                <TableCell component="th" scope="row">
-                  {row.name}
+                <TableCell>
+                  {row.name.slice(0, 40)} ...
                 </TableCell>
                 <TableCell align="center">{row.price}</TableCell>
                 <TableCell align="center"></TableCell>
