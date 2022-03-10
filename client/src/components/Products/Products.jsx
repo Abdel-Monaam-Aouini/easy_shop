@@ -16,7 +16,7 @@ import fetchData from "../../data/fetchData";
 import { ShoppingCart } from "@mui/icons-material";
 import { useRecoilState } from "recoil";
 import productState from "../../state/productState";
-import { reject } from "lodash";
+import { find, reject } from "lodash";
 import "./Products.css";
 
 const Products = () => {
@@ -87,6 +87,9 @@ const Products = () => {
                         onClick={() => {
                           addProduct(product);
                         }}
+                        disabled={
+                          find(state, ["_id", product._id]) ? true : false
+                        }
                       >
                         <ShoppingCart /> Add to basket
                       </Button>

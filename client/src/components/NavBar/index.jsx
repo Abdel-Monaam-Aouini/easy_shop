@@ -39,7 +39,7 @@ function NavBar() {
             </Typography>
             <div className="basket-wrapper">
               <h2>
-                Total cost: <strong>{cost}</strong>
+                Total cost: <strong>$ {parseFloat(cost).toFixed(2)}</strong>
               </h2>
             </div>
             <div className="basket-wrapper">
