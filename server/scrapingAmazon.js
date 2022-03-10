@@ -23,26 +23,14 @@ const fetchProducts = async () => {
 
       const image = shelf.find(".s-image").attr("src");
 
-      const reviews = shelf
-        .find(
-          "div.a-section.a-spacing-none.a-spacing-top-micro > div.a-row.a-size-small"
-        )
-        .children("span")
-        .last()
-        .attr("aria-label");
-
-      const rating = shelf
-        .find("div.a-section.a-spacing-none.a-spacing-top-micro > div > span")
-        .attr("aria-label");
-
-      const price = shelf.find("span.a-price > span.a-offscreen").text();
+      const price = shelf.find("span.a-price > span.a-offscreen")
+                        .text()
+                        .slice(1, 6) || 10;
 
       products.push({
         name,
         image,
         price,
-        reviews,
-        rating,
       });
     });
 

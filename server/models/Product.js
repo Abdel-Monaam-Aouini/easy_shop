@@ -10,15 +10,7 @@ const productSchema = mongoose.Schema({
     default: "",
   },
   price: {
-    type: String,
-    default: 0,
-  },
-  rating: {
-    type: String,
-    default: 0,
-  },
-  reviews: {
-    type: String,
+    type: Number,
     default: 0,
   },
   dateCreated: {
