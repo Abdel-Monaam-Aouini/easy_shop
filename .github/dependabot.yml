@@ -2,7 +2,7 @@
 version: 2
 updates:
   - package-ecosystem: 'npm'
-    directory: '/client /server'
+    directory: '/**'
     schedule:
       interval: 'daily'
     commit-message:
