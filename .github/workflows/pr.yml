@@ -1,28 +1,57 @@
 name: PR
 
 on:
-  push:
-    branches:
-      - master
   pull_request:
-    types: [opened, synchronize, reopened, closed]
-    branches:
-      - master
+    types:
+      - opened
+      - edited
+      - synchronize
+
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
 # Sets the GITHUB_TOKEN permissions to allow deployment to GitHub Pages
 permissions:
+  id-token: write
   contents: read
+  issues: write
   pull-requests: write
 
-# Allow one concurrent deployment
-concurrency:
-  group: 'pages'
-  cancel-in-progress: true
-
 jobs:
-  set-automerge:
+  test_server:
+    name: Server
+    runs-on: ubuntu-latest
+    environment: testing
+    steps:
+      - name: 👌🏻 Checkout
+        uses: actions/checkout@v3
+      - name: 👌🏻 Setup mongodb
+        run: |
+         cd server
+         docker-compose up -d
+      - name: 👌🏻 Run server
+        run: |
+         cd server
+         npm ci
+         npm run start &
+  test_client:
+    name: Client
+    runs-on: ubuntu-latest
+    environment: testing
+    steps:
+      - name: 👌🏻 Checkout
+        uses: actions/checkout@v3
+      - name: 👌🏻 Setup and build
+        run: |
+         cd client
+         npm ci
+         npm run build
+         npm run preview &
+      - name: 🔎 Run tests
+        run: |
+         cd client
+         npm run test
+  dependabot_automerge:
     name: Approve and automerge (only dependanbot PRs)
     runs-on: ubuntu-latest
     environment: testing
@@ -35,6 +64,7 @@ jobs:
         uses: dependabot/fetch-metadata@v1.1.1
         with:
           github-token: "${{ secrets.GITHUB_TOKEN }}"
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Approve a PR
         run: gh pr review --approve "$PR_URL"
         env:
@@ -42,7 +72,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Enable auto-merge for Dependabot PRs
         if: ${{ steps.dependabot-metadata.outputs.update-type != 'version-update:semver-major' }}
-        run: gh pr merge --auto --squash "$PR_URL"
+        run: gh pr merge --auto --merge "$PR_URL"
         env:
           PR_URL: ${{ github.event.pull_request.html_url }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

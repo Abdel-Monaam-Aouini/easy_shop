@@ -7,7 +7,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.26.0",
+    "axios": "^1.3.4",
     "bcrypt": "^5.0.1",
     "cheerio": "^1.0.0-rc.10",
     "cors": "^2.8.5",
@@ -24,7 +24,7 @@
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-es2015": "^6.24.1",
-    "nodemon": "^1.18.1"
+    "nodemon": "^2.0.21"
   },
   "type": "module",
   "babel": {
