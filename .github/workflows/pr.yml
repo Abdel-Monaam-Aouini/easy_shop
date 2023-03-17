@@ -38,7 +38,7 @@ jobs:
     name: Client
     runs-on: ubuntu-latest
     environment: testing
-     needs: [test_server]
+    needs: [test_server]
     steps:
       - name: 👌🏻 Checkout
         uses: actions/checkout@v3
