@@ -6,15 +6,15 @@ updates:
     schedule:
       interval: 'daily'
     commit-message:
-      prefix: chore(npm)
-      prefix-development: chore(npm)
+      prefix: chore(deps)
+      prefix-development: chore(deps)
     open-pull-requests-limit: 99
 
-  - package-ecosystem: 'npm'
+  - package-ecosystem: 'deps'
     directory: '/server/'
     schedule:
       interval: 'daily'
     commit-message:
-      prefix: chore(npm)
-      prefix-development: chore(npm)
+      prefix: chore(deps)
+      prefix-development: chore(deps)
     open-pull-requests-limit: 99
