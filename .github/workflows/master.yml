@@ -59,8 +59,21 @@ jobs:
         uses: actions/checkout@v3
         with:
           github-token: "${{ secrets.GITHUB_TOKEN }}"
-      - run: npm ci --include=dev
-      - name: Create release
-        run: npx semantic-release
+      - name: Release client
+        run: |
+         cd client
+         npm ci --include=dev
+      - name: Create release client
+        run: |
+         cd client
+         npx semantic-release
+      - name: Release server
+        run: |
+         cd server
+         npm ci --include=dev
+      - name: Create release server
+        run: |
+         cd server
+         npx semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
