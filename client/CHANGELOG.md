@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/Abdel-Monaam-Aouini/easy_shop/compare/v1.0.0...v1.0.1) (2023-03-17)
+
+
+### Bug Fixes
+
+* ignore npm token ([62e8981](https://github.com/Abdel-Monaam-Aouini/easy_shop/commit/62e8981b9e411b3eaa38e6361055a5140012ce7c))
+
 # 1.0.0 (2023-03-17)
 
 
