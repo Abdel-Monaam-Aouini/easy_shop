@@ -48,3 +48,19 @@ jobs:
         run: |
          cd client
          npm run test
+  
+  tag:
+    name: Create a tag
+    runs-on: ubuntu-latest
+    environment: production
+    needs: [test, style]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          github-token: "${{ secrets.GITHUB_TOKEN }}"
+      - run: npm ci --include=dev
+      - name: Create release
+        run: npx semantic-release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
