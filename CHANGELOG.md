@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/Abdel-Monaam-Aouini/easy_shop/compare/v1.0.2...v1.1.0) (2023-03-17)
+
+
+### Features
+
+* handle workflows ([920df3f](https://github.com/Abdel-Monaam-Aouini/easy_shop/commit/920df3f9e1d4e69be85d6a83a33420e1d5702334))
+
 ## [1.0.2](https://github.com/Abdel-Monaam-Aouini/easy_shop/compare/v1.0.1...v1.0.2) (2023-03-17)
 
 
