@@ -6,8 +6,8 @@ updates:
     schedule:
       interval: 'daily'
     commit-message:
-      prefix: dependency
-      prefix-development: dependency
+      prefix: chore(npm)
+      prefix-development: chore(npm)
     open-pull-requests-limit: 99
 
   - package-ecosystem: 'npm'
@@ -15,6 +15,6 @@ updates:
     schedule:
       interval: 'daily'
     commit-message:
-      prefix: dependency
-      prefix-development: dependency
+      prefix: chore(npm)
+      prefix-development: chore(npm)
     open-pull-requests-limit: 99
