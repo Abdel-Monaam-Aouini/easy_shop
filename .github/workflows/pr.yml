@@ -54,6 +54,7 @@ jobs:
   dependabot_automerge:
     name: Approve and automerge (only dependanbot PRs)
     runs-on: ubuntu-latest
+    needs: [test_server, test_client]
     environment: testing
     if: ${{ github.actor == 'dependabot[bot]' }}
     steps:
