@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/Abdel-Monaam-Aouini/easy_shop/compare/v1.1.0...v1.1.1) (2023-03-17)
+
+
+### Bug Fixes
+
+* prefix ([6d7b5eb](https://github.com/Abdel-Monaam-Aouini/easy_shop/commit/6d7b5eb33e5b0963770d0aa6789a01293a6d47d9))
+
 # [1.1.0](https://github.com/Abdel-Monaam-Aouini/easy_shop/compare/v1.0.2...v1.1.0) (2023-03-17)
 
 
