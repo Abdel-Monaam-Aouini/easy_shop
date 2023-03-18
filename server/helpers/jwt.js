@@ -1,9 +1,9 @@
-import expressJwt from "express-jwt";
+import { expressjwt } from "express-jwt";
 import config from "../config.js";
 
 function authJwt() {
   const { API_URL, secret } = config;
-  return expressJwt({
+  return expressjwt({
     secret,
     algorithms: ["HS256"],
     isRevoked: isRevoked,
