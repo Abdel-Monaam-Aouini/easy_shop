@@ -1,3 +1,10 @@
+## [1.1.3](https://github.com/Abdel-Monaam-Aouini/easy_shop/compare/v1.1.2...v1.1.3) (2023-03-18)
+
+
+### Bug Fixes
+
+* fetch products from Amazon ([37097b9](https://github.com/Abdel-Monaam-Aouini/easy_shop/commit/37097b94d497bf12abbde55b7cec7adfccb21ed4))
+
 ## [1.1.2](https://github.com/Abdel-Monaam-Aouini/easy_shop/compare/v1.1.1...v1.1.2) (2023-03-18)
 
 
