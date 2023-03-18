@@ -1,3 +1,10 @@
+## [1.1.2](https://github.com/Abdel-Monaam-Aouini/easy_shop/compare/v1.1.1...v1.1.2) (2023-03-18)
+
+
+### Bug Fixes
+
+* bug expressjwt import module ([3229a7b](https://github.com/Abdel-Monaam-Aouini/easy_shop/commit/3229a7b81fb9c7fcab57404856b9089b77ef7660))
+
 ## [1.1.1](https://github.com/Abdel-Monaam-Aouini/easy_shop/compare/v1.1.0...v1.1.1) (2023-03-17)
 
 
