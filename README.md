@@ -16,17 +16,14 @@ Install Dependencies:
 ```sh
     yarn
 ```
-OR
-```sh
-    npm install
-```
 
 Run Server:
 
 ```sh
     yarn start
 ```
-OR
+
+# Client
 ```sh
-    npm start
+    cd server/ && yarn && yarn dev
 ```
