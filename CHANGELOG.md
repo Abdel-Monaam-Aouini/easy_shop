@@ -1,3 +1,11 @@
+## [1.1.4](https://github.com/Abdel-Monaam-Aouini/easy_shop/compare/v1.1.3...v1.1.4) (2023-03-20)
+
+
+### Bug Fixes
+
+* clean :) ([10cae03](https://github.com/Abdel-Monaam-Aouini/easy_shop/commit/10cae03651b2876535cb7762a363d19f1f0ad954))
+* update README ([5a9d431](https://github.com/Abdel-Monaam-Aouini/easy_shop/commit/5a9d43129ea6d156996adb1c1ef21b5af931f0be))
+
 ## [1.1.3](https://github.com/Abdel-Monaam-Aouini/easy_shop/compare/v1.1.2...v1.1.3) (2023-03-18)
 
 
