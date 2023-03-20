@@ -25,5 +25,5 @@ Run Server:
 
 # Client
 ```sh
-    cd server/ && yarn && yarn dev
+    cd client/ && yarn && yarn dev
 ```
