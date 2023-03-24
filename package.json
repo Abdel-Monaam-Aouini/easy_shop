@@ -1,6 +1,6 @@
 {
   "name": "easy_shop",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "EASY SHOP (NodeJS ExpressJS MongoDB ReactJS)",
   "private": true,
   "main": "index.js",

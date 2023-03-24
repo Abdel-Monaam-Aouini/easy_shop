@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/Abdel-Monaam-Aouini/easy_shop/compare/v1.2.0...v1.2.1) (2023-03-24)
+
+
+### Bug Fixes
+
+* update pr yml ([b5e38a9](https://github.com/Abdel-Monaam-Aouini/easy_shop/commit/b5e38a926953cbdbc5fda6c3097a034e6513fd9e))
+
 # [1.2.0](https://github.com/Abdel-Monaam-Aouini/easy_shop/compare/v1.1.4...v1.2.0) (2023-03-20)
 
 
