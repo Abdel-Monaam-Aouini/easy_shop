@@ -1,3 +1,16 @@
+# [1.3.0](https://github.com/Abdel-Monaam-Aouini/easy_shop/compare/v1.2.1...v1.3.0) (2023-03-31)
+
+
+### Features
+
+* bump @mui/material from 5.11.13 to 5.11.15 in /client ([4e8a8c8](https://github.com/Abdel-Monaam-Aouini/easy_shop/commit/4e8a8c8995baac4d97ce287823312de818c17722))
+* bump @stripe/react-stripe-js from 2.0.0 to 2.1.0 in /client ([080c508](https://github.com/Abdel-Monaam-Aouini/easy_shop/commit/080c50878712bbb192949bced17a134b55454357))
+* bump @stripe/stripe-js from 1.50.0 to 1.52.0 in /client ([61d3437](https://github.com/Abdel-Monaam-Aouini/easy_shop/commit/61d3437b15ed82e2a4290c162ee2a1a9befc2d28))
+* bump mongoose from 7.0.2 to 7.0.3 in /server ([f309c72](https://github.com/Abdel-Monaam-Aouini/easy_shop/commit/f309c72bfd3c636146963bdc287b00de896ebc55))
+* bump nodemon from 2.0.21 to 2.0.22 in /server ([eb2bffa](https://github.com/Abdel-Monaam-Aouini/easy_shop/commit/eb2bffa587410cbc03933bf8f20db286b123fbc5))
+* bump react-router-dom from 6.9.0 to 6.10.0 in /client ([356dfa5](https://github.com/Abdel-Monaam-Aouini/easy_shop/commit/356dfa54706853463b4d2423e6a43fe9d62305bc))
+* bump vitest from 0.29.6 to 0.29.8 in /client ([a448b9e](https://github.com/Abdel-Monaam-Aouini/easy_shop/commit/a448b9ede9e85324328b6de5a721d57cf934ef21))
+
 ## [1.2.1](https://github.com/Abdel-Monaam-Aouini/easy_shop/compare/v1.2.0...v1.2.1) (2023-03-24)
 
 
