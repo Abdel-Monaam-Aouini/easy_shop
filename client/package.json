@@ -12,7 +12,7 @@
     "@chec/commerce.js": "^2.8.0",
     "@emotion/react": "^11.8.1",
     "@emotion/styled": "^11.10.6",
-    "@mui/icons-material": "^5.5.0",
+    "@mui/icons-material": "^5.11.16",
     "@mui/material": "^5.11.15",
     "@stripe/react-stripe-js": "^2.1.0",
     "@stripe/stripe-js": "^1.52.0",
