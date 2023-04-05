@@ -1,3 +1,12 @@
+# [1.4.0](https://github.com/Abdel-Monaam-Aouini/easy_shop/compare/v1.3.0...v1.4.0) (2023-04-05)
+
+
+### Features
+
+* bump @mui/icons-material from 5.5.0 to 5.11.16 in /client ([7c5df8a](https://github.com/Abdel-Monaam-Aouini/easy_shop/commit/7c5df8acf64739ff5fc5a0bcd2cb2bbc76f2af89))
+* bump @mui/material from 5.11.15 to 5.11.16 in /client ([926257c](https://github.com/Abdel-Monaam-Aouini/easy_shop/commit/926257c1486ca23bb64b0f08bcbb8bbeeccf8519))
+* bump react and react-dom in /client ([b3bec49](https://github.com/Abdel-Monaam-Aouini/easy_shop/commit/b3bec49bfac8b30bb9090c270d805a2525ba7700))
+
 # [1.3.0](https://github.com/Abdel-Monaam-Aouini/easy_shop/compare/v1.2.1...v1.3.0) (2023-03-31)
 
 
