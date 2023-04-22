@@ -1,3 +1,21 @@
+# [1.5.0](https://github.com/Abdel-Monaam-Aouini/easy_shop/compare/v1.4.0...v1.5.0) (2023-04-22)
+
+
+### Features
+
+* bump @mui/material from 5.11.16 to 5.12.0 in /client ([14ae62e](https://github.com/Abdel-Monaam-Aouini/easy_shop/commit/14ae62ed35e16ab6af583a529c505fe1ba4e144e))
+* bump @mui/material from 5.12.0 to 5.12.1 in /client ([0bf9cbb](https://github.com/Abdel-Monaam-Aouini/easy_shop/commit/0bf9cbbbbfbdcc085ec5c189f61d23fce4a2658f))
+* bump @stripe/stripe-js from 1.52.0 to 1.52.1 in /client ([dea8424](https://github.com/Abdel-Monaam-Aouini/easy_shop/commit/dea8424502a143329970b4111861e06e0711deda))
+* bump @vitejs/plugin-react from 3.1.0 to 4.0.0 in /client ([6b69419](https://github.com/Abdel-Monaam-Aouini/easy_shop/commit/6b69419c96054f66abf456f14ee8b107f437f833))
+* bump axios from 1.3.4 to 1.3.5 in /client ([fdac11a](https://github.com/Abdel-Monaam-Aouini/easy_shop/commit/fdac11a5d3eb655af8edf99de0290c5d88385e7f))
+* bump axios from 1.3.4 to 1.3.5 in /server ([4f6452c](https://github.com/Abdel-Monaam-Aouini/easy_shop/commit/4f6452c0af59261e2f38e77c785e7fd1473310e7))
+* bump axios from 1.3.5 to 1.3.6 in /client ([f2dde90](https://github.com/Abdel-Monaam-Aouini/easy_shop/commit/f2dde9075239efcdff9b7ed4a27f2db33614ce24))
+* bump axios from 1.3.5 to 1.3.6 in /server ([ab23ef8](https://github.com/Abdel-Monaam-Aouini/easy_shop/commit/ab23ef875aa241e0293131f67f6b83ac161cae01))
+* bump vite from 4.2.1 to 4.3.0 in /client ([0b74e5e](https://github.com/Abdel-Monaam-Aouini/easy_shop/commit/0b74e5ed8e3e4dcafc73eec02835ed059b50e742))
+* bump vite from 4.3.0 to 4.3.1 in /client ([919b8fd](https://github.com/Abdel-Monaam-Aouini/easy_shop/commit/919b8fd782243a427379bdaa244040778e6ecafd))
+* bump vitest from 0.29.8 to 0.30.0 in /client ([ef45799](https://github.com/Abdel-Monaam-Aouini/easy_shop/commit/ef45799eab3b292b40b919d412f85a6b4745ea44))
+* bump vitest from 0.30.0 to 0.30.1 in /client ([1fc6d5e](https://github.com/Abdel-Monaam-Aouini/easy_shop/commit/1fc6d5e6e3d05c7227a6a72abc8374080f473c31))
+
 # [1.4.0](https://github.com/Abdel-Monaam-Aouini/easy_shop/compare/v1.3.0...v1.4.0) (2023-04-05)
 
 
