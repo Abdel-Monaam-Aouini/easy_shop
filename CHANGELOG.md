@@ -1,3 +1,19 @@
+# [1.6.0](https://github.com/Abdel-Monaam-Aouini/easy_shop/compare/v1.5.0...v1.6.0) (2023-05-02)
+
+
+### Features
+
+* bump @emotion/react from 11.8.1 to 11.10.8 in /client ([9a99fc7](https://github.com/Abdel-Monaam-Aouini/easy_shop/commit/9a99fc7144210933a1b01774ff994fa79377e0db))
+* bump @emotion/styled from 11.10.6 to 11.10.8 in /client ([663a396](https://github.com/Abdel-Monaam-Aouini/easy_shop/commit/663a3969a20531f9817ab7c035b2bd10f39ed41d))
+* bump @mui/material from 5.12.1 to 5.12.2 in /client ([823c5e4](https://github.com/Abdel-Monaam-Aouini/easy_shop/commit/823c5e40772d23074832e5d27c904a7ab8af6168))
+* bump axios from 1.3.6 to 1.4.0 in /client ([dcfb618](https://github.com/Abdel-Monaam-Aouini/easy_shop/commit/dcfb6189bfb720840d1306cdb1461e74af5925b7))
+* bump axios from 1.3.6 to 1.4.0 in /server ([a6e651b](https://github.com/Abdel-Monaam-Aouini/easy_shop/commit/a6e651b4af6e2264dc10985d9f4869a6715f7847))
+* bump mongoose from 7.0.3 to 7.0.5 in /server ([60ae7a5](https://github.com/Abdel-Monaam-Aouini/easy_shop/commit/60ae7a58d744ee21bd265b8d86ee410dfa1efa3e))
+* bump mongoose from 7.0.5 to 7.1.0 in /server ([f8748b5](https://github.com/Abdel-Monaam-Aouini/easy_shop/commit/f8748b52faca81cdc3496e3494ff6e1961eda31d))
+* bump react-router-dom from 6.10.0 to 6.11.0 in /client ([104e7ff](https://github.com/Abdel-Monaam-Aouini/easy_shop/commit/104e7fff24dd9ae39b87ab66f585633d0b6254b8))
+* bump vite from 4.3.1 to 4.3.2 in /client ([05229a0](https://github.com/Abdel-Monaam-Aouini/easy_shop/commit/05229a0a84ee9f2003f89366a79a4426348f9b7b))
+* bump vite from 4.3.2 to 4.3.3 in /client ([#63](https://github.com/Abdel-Monaam-Aouini/easy_shop/issues/63)) ([917b926](https://github.com/Abdel-Monaam-Aouini/easy_shop/commit/917b9264511a679c44d071cccfcfaaeca5de56b2))
+
 # [1.5.0](https://github.com/Abdel-Monaam-Aouini/easy_shop/compare/v1.4.0...v1.5.0) (2023-04-22)
 
 
