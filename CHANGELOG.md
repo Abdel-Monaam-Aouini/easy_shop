@@ -1,3 +1,24 @@
+# [1.7.0](https://github.com/Abdel-Monaam-Aouini/easy_shop/compare/v1.6.0...v1.7.0) (2023-05-10)
+
+
+### Features
+
+* bump @emotion/react from 11.10.8 to 11.11.0 in /client ([25c7f2d](https://github.com/Abdel-Monaam-Aouini/easy_shop/commit/25c7f2dfec0ba0b0e2f3b5be2ddc863a62572f64))
+* bump @emotion/react from 11.10.8 to 11.11.0 in /client ([#75](https://github.com/Abdel-Monaam-Aouini/easy_shop/issues/75)) ([9e616dc](https://github.com/Abdel-Monaam-Aouini/easy_shop/commit/9e616dc6dd7c05c232689d01271f0d0bdaf81618))
+* bump @emotion/styled from 11.10.8 to 11.11.0 in /client ([68ee9a6](https://github.com/Abdel-Monaam-Aouini/easy_shop/commit/68ee9a6bd3cdea8639982241f54f38dd0922aaa8))
+* bump @emotion/styled from 11.10.8 to 11.11.0 in /client ([#76](https://github.com/Abdel-Monaam-Aouini/easy_shop/issues/76)) ([240980e](https://github.com/Abdel-Monaam-Aouini/easy_shop/commit/240980e485a68f0e2238f99d20a7938b750b7c9f))
+* bump @mui/material from 5.12.2 to 5.12.3 in /client ([06531f4](https://github.com/Abdel-Monaam-Aouini/easy_shop/commit/06531f42ef274ec6d69500985211957553260971))
+* bump @mui/material from 5.12.2 to 5.12.3 in /client ([#70](https://github.com/Abdel-Monaam-Aouini/easy_shop/issues/70)) ([67436a3](https://github.com/Abdel-Monaam-Aouini/easy_shop/commit/67436a328d9e699df9a7996836fc22a83d5451fc))
+* bump @mui/material from 5.12.3 to 5.13.0 in /client ([#77](https://github.com/Abdel-Monaam-Aouini/easy_shop/issues/77)) ([3e7606d](https://github.com/Abdel-Monaam-Aouini/easy_shop/commit/3e7606da19ab8f170c77f9bc9cf0fef533f79a9f))
+* bump react-router-dom from 6.11.0 to 6.11.1 in /client ([4ee3a69](https://github.com/Abdel-Monaam-Aouini/easy_shop/commit/4ee3a69b4d635eafa9a3ae9dbf2454915d215a51))
+* bump react-router-dom from 6.11.0 to 6.11.1 in /client ([#72](https://github.com/Abdel-Monaam-Aouini/easy_shop/issues/72)) ([4e4b244](https://github.com/Abdel-Monaam-Aouini/easy_shop/commit/4e4b244c70943467cf0898f90097a6aa27ed4ca5))
+* bump vite from 4.3.3 to 4.3.4 in /client ([e4224ee](https://github.com/Abdel-Monaam-Aouini/easy_shop/commit/e4224ee1af4478aa91c304148f83d64bedc54b52))
+* bump vite from 4.3.3 to 4.3.4 in /client ([#71](https://github.com/Abdel-Monaam-Aouini/easy_shop/issues/71)) ([b199bd9](https://github.com/Abdel-Monaam-Aouini/easy_shop/commit/b199bd95a84d6e0496dff888220c87564352fb30))
+* bump vite from 4.3.4 to 4.3.5 in /client ([1fc4e85](https://github.com/Abdel-Monaam-Aouini/easy_shop/commit/1fc4e858120205841795aca27158fb1519775268))
+* bump vite from 4.3.4 to 4.3.5 in /client ([#74](https://github.com/Abdel-Monaam-Aouini/easy_shop/issues/74)) ([2aaf08c](https://github.com/Abdel-Monaam-Aouini/easy_shop/commit/2aaf08c6076816e3ac248643299df38b1740f391))
+* bump vitest from 0.30.1 to 0.31.0 in /client ([6f9ff71](https://github.com/Abdel-Monaam-Aouini/easy_shop/commit/6f9ff71b3e0ca0991df241de9ef8219045cd81fa))
+* bump vitest from 0.30.1 to 0.31.0 in /client ([#73](https://github.com/Abdel-Monaam-Aouini/easy_shop/issues/73)) ([d4299a3](https://github.com/Abdel-Monaam-Aouini/easy_shop/commit/d4299a3b1af6f54eabb113b1e68e725732cf2741))
+
 # [1.6.0](https://github.com/Abdel-Monaam-Aouini/easy_shop/compare/v1.5.0...v1.6.0) (2023-05-02)
 
 
