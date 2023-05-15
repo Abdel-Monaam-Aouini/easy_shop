@@ -1,3 +1,12 @@
+# [1.8.0](https://github.com/Abdel-Monaam-Aouini/easy_shop/compare/v1.7.0...v1.8.0) (2023-05-15)
+
+
+### Features
+
+* bump mongoose from 7.1.0 to 7.1.1 in /server ([67328dd](https://github.com/Abdel-Monaam-Aouini/easy_shop/commit/67328dd49b8ddaf89be85bd857e18936230226c2))
+* bump mongoose from 7.1.0 to 7.1.1 in /server ([#78](https://github.com/Abdel-Monaam-Aouini/easy_shop/issues/78)) ([19f0555](https://github.com/Abdel-Monaam-Aouini/easy_shop/commit/19f05551e9d64f491fa6c7c2420e06504efbd496))
+* bump vite from 4.3.5 to 4.3.6 in /client ([#79](https://github.com/Abdel-Monaam-Aouini/easy_shop/issues/79)) ([76603c8](https://github.com/Abdel-Monaam-Aouini/easy_shop/commit/76603c8bd6b656c8cb9ae64df47bd6b4dda0aa91))
+
 # [1.7.0](https://github.com/Abdel-Monaam-Aouini/easy_shop/compare/v1.6.0...v1.7.0) (2023-05-10)
 
 
