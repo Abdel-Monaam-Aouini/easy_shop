@@ -1,3 +1,11 @@
+# [1.10.0](https://github.com/Abdel-Monaam-Aouini/easy_shop/compare/v1.9.0...v1.10.0) (2023-05-17)
+
+
+### Features
+
+* bump @mui/material from 5.13.0 to 5.13.1 in /client ([#82](https://github.com/Abdel-Monaam-Aouini/easy_shop/issues/82)) ([612662a](https://github.com/Abdel-Monaam-Aouini/easy_shop/commit/612662a8303b1dbb9854f7f7d38ddbdf663a78a7))
+* bump vite from 4.3.6 to 4.3.7 in /client ([#83](https://github.com/Abdel-Monaam-Aouini/easy_shop/issues/83)) ([306db2f](https://github.com/Abdel-Monaam-Aouini/easy_shop/commit/306db2f42f9b51f2ba206b7647b3afa2cc88a2f8))
+
 # [1.9.0](https://github.com/Abdel-Monaam-Aouini/easy_shop/compare/v1.8.0...v1.9.0) (2023-05-17)
 
 
