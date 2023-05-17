@@ -1,3 +1,10 @@
+# [1.9.0](https://github.com/Abdel-Monaam-Aouini/easy_shop/compare/v1.8.0...v1.9.0) (2023-05-17)
+
+
+### Features
+
+* bump @stripe/stripe-js from 1.52.1 to 1.53.0 in /client ([#80](https://github.com/Abdel-Monaam-Aouini/easy_shop/issues/80)) ([5ef0eca](https://github.com/Abdel-Monaam-Aouini/easy_shop/commit/5ef0eca915ae7d3514ebd5fb3fe867e43ff3ace9))
+
 # [1.8.0](https://github.com/Abdel-Monaam-Aouini/easy_shop/compare/v1.7.0...v1.8.0) (2023-05-15)
 
 
