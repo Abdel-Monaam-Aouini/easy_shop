@@ -1,3 +1,10 @@
+# [1.12.0](https://github.com/Abdel-Monaam-Aouini/easy_shop/compare/v1.11.0...v1.12.0) (2023-05-30)
+
+
+### Features
+
+* bump mongoose from 7.2.0 to 7.2.2 in /server ([#92](https://github.com/Abdel-Monaam-Aouini/easy_shop/issues/92)) ([771a359](https://github.com/Abdel-Monaam-Aouini/easy_shop/commit/771a359d127e62c5ebca94b7d305f344faea0601))
+
 # [1.11.0](https://github.com/Abdel-Monaam-Aouini/easy_shop/compare/v1.10.0...v1.11.0) (2023-05-22)
 
 
