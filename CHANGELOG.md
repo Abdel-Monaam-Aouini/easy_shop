@@ -1,3 +1,15 @@
+# [1.15.0](https://github.com/Abdel-Monaam-Aouini/easy_shop/compare/v1.14.0...v1.15.0) (2025-04-08)
+
+
+### Features
+
+* bump @mui/icons-material from 5.16.6 to 5.16.7 in /client ([07fe46d](https://github.com/Abdel-Monaam-Aouini/easy_shop/commit/07fe46d17a8d58c897dd0a210499e1e214eadc62))
+* bump @mui/icons-material from 5.16.6 to 5.16.7 in /client ([#464](https://github.com/Abdel-Monaam-Aouini/easy_shop/issues/464)) ([a853ad1](https://github.com/Abdel-Monaam-Aouini/easy_shop/commit/a853ad16f4361c86481e2d909293c1e429a9ff85))
+* bump @stripe/stripe-js from 2.4.0 to 4.9.0 in /client ([#515](https://github.com/Abdel-Monaam-Aouini/easy_shop/issues/515)) ([29c3307](https://github.com/Abdel-Monaam-Aouini/easy_shop/commit/29c3307cd03482ad5bf074e84896b1a8e1347f70))
+* bump @vitejs/plugin-react from 4.3.1 to 4.3.3 in /client ([#514](https://github.com/Abdel-Monaam-Aouini/easy_shop/issues/514)) ([366e2e8](https://github.com/Abdel-Monaam-Aouini/easy_shop/commit/366e2e8c7db490c6eaa1ab139bf381d0f18a7406))
+* bump react-router-dom from 6.26.0 to 6.27.0 in /client ([50e07be](https://github.com/Abdel-Monaam-Aouini/easy_shop/commit/50e07be59432abcf012ce604aba56bb6792542be))
+* bump react-router-dom from 6.26.0 to 6.27.0 in /client ([#511](https://github.com/Abdel-Monaam-Aouini/easy_shop/issues/511)) ([2493d57](https://github.com/Abdel-Monaam-Aouini/easy_shop/commit/2493d57429c495d814d130aebc8fcfafcfa13fa7))
+
 # [1.14.0](https://github.com/Abdel-Monaam-Aouini/easy_shop/compare/v1.13.0...v1.14.0) (2025-04-08)
 
 
