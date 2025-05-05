@@ -14,7 +14,7 @@
     "@emotion/styled": "^11.14.0",
     "@mui/icons-material": "^5.16.7",
     "@mui/material": "^5.16.6",
-    "@stripe/react-stripe-js": "^2.7.3",
+    "@stripe/react-stripe-js": "^3.7.0",
     "@stripe/stripe-js": "^4.9.0",
     "axios": "^1.9.0",
     "lodash": "^4.17.21",
