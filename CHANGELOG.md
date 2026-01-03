@@ -1,3 +1,11 @@
+# [1.17.0](https://github.com/Abdel-Monaam-Aouini/easy_shop/compare/v1.16.0...v1.17.0) (2026-01-03)
+
+
+### Features
+
+* bump @stripe/react-stripe-js from 2.7.3 to 4.0.2 in /client ([#648](https://github.com/Abdel-Monaam-Aouini/easy_shop/issues/648)) ([70d4188](https://github.com/Abdel-Monaam-Aouini/easy_shop/commit/70d41881a3c5ad1ca884298e6b9d35bc0f65b356))
+* bump express from 4.19.2 to 5.2.1 in /server ([#714](https://github.com/Abdel-Monaam-Aouini/easy_shop/issues/714)) ([98f2db9](https://github.com/Abdel-Monaam-Aouini/easy_shop/commit/98f2db910c1717789e0697677d0086d34b623cb2))
+
 # [1.16.0](https://github.com/Abdel-Monaam-Aouini/easy_shop/compare/v1.15.0...v1.16.0) (2026-01-03)
 
 
